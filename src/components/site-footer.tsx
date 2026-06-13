@@ -3,7 +3,7 @@ import Link from "next/link";
 const LINKS = [
   { href: "/mapa", rotulo: "O mapa" },
   { href: "/glossario", rotulo: "Dicionário" },
-  { href: "https://github.com/lmeireles/atlas-tatame", rotulo: "GitHub" },
+  { href: "https://github.com/leonardo-meireles/atlas-tatame", rotulo: "GitHub" },
 ];
 
 export function SiteFooter() {

@@ -11,7 +11,7 @@
 > Interactive BJJ knowledge graph for white belts — in Portuguese.  
 > Every position shows your options: sweep, submit, or pass. Free, no signup.
 
-**[Open the Atlas →](https://atlas-tatame.vercel.app)**
+**[Open the Atlas →](https://leonardo-meireles.github.io/atlas-tatame)**
 
 ---
 
