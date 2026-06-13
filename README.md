@@ -7,11 +7,12 @@
 ![Three.js](https://img.shields.io/badge/Three.js-r184-black?logo=threedotjs)
 ![Tests](https://img.shields.io/badge/tests-vitest-6E9F18?logo=vitest&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-22c55e)
+![Deploy](https://github.com/leonardo-meireles/atlas-tatame/actions/workflows/deploy.yml/badge.svg)
 
 > Interactive BJJ knowledge graph for white belts — in Portuguese.  
 > Every position shows your options: sweep, submit, or pass. Free, no signup.
 
-**[Open the Atlas →](https://leonardo-meireles.github.io/atlas-tatame)**
+**[Open the Atlas →](https://leonardo-meireles.github.io/atlas-tatame)** · [Architecture](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md)
 
 ---
 
