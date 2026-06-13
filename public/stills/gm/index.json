@@ -1,0 +1,86 @@
+[
+  {
+    "id": 134,
+    "slug": "north-south-choke",
+    "name": "north/south choke",
+    "concept": "north_south",
+    "file": "stills/gm/134-north-south-choke.png"
+  },
+  {
+    "id": 46,
+    "slug": "standing-vs-reverse-dlr",
+    "name": "standing vs reverse dlr",
+    "concept": "de_la_riva",
+    "file": "stills/gm/46-standing-vs-reverse-dlr.png"
+  },
+  {
+    "id": 149,
+    "slug": "combat-base-vs-butterfly",
+    "name": "combat base vs butterfly",
+    "concept": "butterfly_guard",
+    "file": "stills/gm/149-combat-base-vs-butterfly.png"
+  },
+  {
+    "id": 226,
+    "slug": "threatened-triangle-w-hands-clasped",
+    "name": "threatened triangle w/ hands clasped",
+    "concept": "triangle",
+    "file": "stills/gm/226-threatened-triangle-w-hands-clasped.png"
+  },
+  {
+    "id": 182,
+    "slug": "deep-half-backdoor-sweep",
+    "name": "deep half backdoor sweep",
+    "concept": "deep_half",
+    "file": "stills/gm/182-deep-half-backdoor-sweep.png"
+  },
+  {
+    "id": 190,
+    "slug": "mounted-triangle",
+    "name": "mounted triangle",
+    "concept": "mount",
+    "file": "stills/gm/190-mounted-triangle.png"
+  },
+  {
+    "id": 192,
+    "slug": "knee-on-belly-drape",
+    "name": "knee on belly drape",
+    "concept": "knee_on_belly",
+    "file": "stills/gm/192-knee-on-belly-drape.png"
+  },
+  {
+    "id": 198,
+    "slug": "rear-naked-choke-w-arm-trapped",
+    "name": "rear naked choke w/ arm trapped",
+    "concept": "back_control",
+    "file": "stills/gm/198-rear-naked-choke-w-arm-trapped.png"
+  },
+  {
+    "id": 376,
+    "slug": "closed-guard-w-100",
+    "name": "closed guard w/ 100%",
+    "concept": "closed_guard",
+    "file": "stills/gm/376-closed-guard-w-100.png"
+  },
+  {
+    "id": 324,
+    "slug": "kneeling-vs-seated-open-guard-w-2-on-1",
+    "name": "kneeling vs seated open guard w/ 2-on-1",
+    "concept": "open_guard",
+    "file": "stills/gm/324-kneeling-vs-seated-open-guard-w-2-on-1.png"
+  },
+  {
+    "id": 231,
+    "slug": "halfway-pendulum-sweep",
+    "name": "halfway pendulum sweep",
+    "concept": "pendulum_sweep",
+    "file": "stills/gm/231-halfway-pendulum-sweep.png"
+  },
+  {
+    "id": 155,
+    "slug": "half-guard-shell",
+    "name": "half guard shell",
+    "concept": "half_guard",
+    "file": "stills/gm/155-half-guard-shell.png"
+  }
+]

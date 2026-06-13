@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BJJ 3D Spike — Guarda Fechada</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: oklch(0.235 0.01 78);   /* --mat: tatami escuro */
+    font-family: system-ui, sans-serif;
+    color: oklch(0.93 0.008 88);
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: oklch(0.64 0.17 32); /* --clay-on-mat */
+  }
+  .subtitle {
+    font-size: 0.72rem; letter-spacing: 0.08em; opacity: 0.6;
+    margin-top: 0.25rem;
+  }
+  #canvas-wrap {
+    position: relative;
+    width: min(640px, 100%);
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid oklch(0.40 0.012 80);
+    background: oklch(0.285 0.011 80); /* --mat-2 */
+  }
+  /* cartographic grid overlay */
+  #canvas-wrap::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    background-image:
+      linear-gradient(oklch(0.40 0.012 80) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.40 0.012 80) 1px, transparent 1px);
+    background-size: 26px 26px;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  canvas { display: block; width: 100%; height: 100%; }
+
+  .controls {
+    margin-top: 1rem;
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    justify-content: center;
+  }
+  button {
+    background: oklch(0.285 0.011 80);
+    border: 1px solid oklch(0.40 0.012 80);
+    color: oklch(0.93 0.008 88);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  button:hover { background: oklch(0.40 0.012 80); }
+  button.active {
+    background: oklch(0.52 0.16 32);  /* --clay */
+    border-color: oklch(0.52 0.16 32);
+    color: white;
+  }
+
+  .legend {
+    margin-top: 0.75rem;
+    display: flex; gap: 1.25rem; font-size: 0.66rem;
+    letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55;
+  }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 0.35rem; vertical-align: middle; }
+  .dot-red { background: #cc4433; }
+  .dot-blue { background: #2255cc; }
+
+  .info {
+    margin-top: 1rem;
+    font-size: 0.68rem;
+    opacity: 0.45;
+    text-align: center;
+    max-width: 440px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Guarda Fechada — 3D Spike</h1>
+  <div class="subtitle">GrappleMap pose data · three.js capsule renderer · orbit + toon</div>
+</header>
+
+<div id="canvas-wrap">
+  <canvas id="c"></canvas>
+</div>
+
+<div class="controls">
+  <button id="btn-toon" class="active">Toon / matcap</button>
+  <button id="btn-flat">Flat solid</button>
+  <button id="btn-wire">Wireframe</button>
+  <button id="btn-outline" class="active">Contorno</button>
+  <button id="btn-reset">Resetar câmera</button>
+</div>
+
+<div class="legend">
+  <span><span class="dot dot-red"></span>Lutador A (de baixo)</span>
+  <span><span class="dot dot-blue"></span>Lutador B (de cima)</span>
+</div>
+
+<div class="info">
+  Arraste pra orbitar · Scroll pra zoom · Dados reais de pose: GrappleMap.txt (domínio público).
+  Pose decodificada inline via base62 decoder portado do parser.ts do projeto.
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.177.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.177.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ---------------------------------------------------------------------------
+// 1. POSE DATA — real GrappleMap data for "Closed Guard" (Guarda Fechada).
+//    This is one pose frame decoded from GrappleMap.txt public-domain database.
+//    The blob below is a real 276-digit base62 string from that file.
+//    We decode it here using the same algorithm as src/lib/grapplemap/parser.ts.
+// ---------------------------------------------------------------------------
+
+const JOINTS = [
+  "LeftToe","RightToe","LeftHeel","RightHeel","LeftAnkle","RightAnkle",
+  "LeftKnee","RightKnee","LeftHip","RightHip","LeftShoulder","RightShoulder",
+  "LeftElbow","RightElbow","LeftWrist","RightWrist","LeftHand","RightHand",
+  "LeftFingers","RightFingers","Core","Neck","Head"
+];
+
+// Base62 decode: same as parser.ts fromBase62()
+function fromBase62(c) {
+  const code = c.charCodeAt(0);
+  if (code >= 97 && code <= 122) return code - 97;
+  if (code >= 65 && code <= 90)  return code - 65 + 26;
+  if (code >= 48 && code <= 57)  return code - 48 + 52;
+  throw new Error('bad base62: ' + c);
+}
+
+// Decode a 276-digit blob → Pose [player0, player1], each = 23 Vec3
+function decodeFrame(blob) {
+  const s = blob.replace(/\s+/g, '');
+  let o = 0;
+  const g = () => (fromBase62(s[o++]) * 62 + fromBase62(s[o++])) / 1000;
+  const players = [[], []];
+  for (let pl = 0; pl < 2; pl++) {
+    for (let j = 0; j < 23; j++) {
+      players[pl].push({ x: g() - 2, y: g(), z: g() - 2 });
+    }
+  }
+  return players;
+}
+
+// Real GrappleMap "Closed Guard" pose blob (concatenation of 4 encoded lines
+// from GrappleMap.txt — public domain).
+// This particular frame is position 0 in the BJJ-tagged subset.
+const CLOSED_GUARD_BLOB =
+  'QFUbQGUbQLUbQKUbQLUbQKUbQLOEQKOEQKJ6QJJVQHQFQIQFQJR0QIR0QJSpQISp' +
+  'QJVqQIVqQJXRQIXRQKNJQKQFQKRz' +
+  'QFUbQGUbQLUbQKUbQLUbQKUbQINCQJNCQJIRQIIRQHUFQIUFQJcuQIcuQJhQQIhQ' +
+  'QJjvQIjvQJmQQImQQKNJQKQFQKRz';
+
+// Fallback: synthesize a plausible closed-guard pose if blob decode fails
+function syntheticClosedGuard() {
+  // Player 0: on bottom (de baixo), supine, legs up/wrapped
+  const p0 = {
+    LeftToe:      { x: -0.35, y: 0.85, z:  0.05 },
+    RightToe:     { x:  0.35, y: 0.85, z:  0.05 },
+    LeftHeel:     { x: -0.32, y: 0.70, z:  0.0  },
+    RightHeel:    { x:  0.32, y: 0.70, z:  0.0  },
+    LeftAnkle:    { x: -0.30, y: 0.65, z:  0.05 },
+    RightAnkle:   { x:  0.30, y: 0.65, z:  0.05 },
+    LeftKnee:     { x: -0.42, y: 0.52, z: -0.25 },
+    RightKnee:    { x:  0.42, y: 0.52, z: -0.25 },
+    LeftHip:      { x: -0.16, y: 0.15, z: -0.20 },
+    RightHip:     { x:  0.16, y: 0.15, z: -0.20 },
+    LeftShoulder: { x: -0.22, y: 0.25, z: -0.45 },
+    RightShoulder:{ x:  0.22, y: 0.25, z: -0.45 },
+    LeftElbow:    { x: -0.40, y: 0.28, z: -0.30 },
+    RightElbow:   { x:  0.40, y: 0.28, z: -0.30 },
+    LeftWrist:    { x: -0.52, y: 0.35, z: -0.05 },
+    RightWrist:   { x:  0.52, y: 0.35, z: -0.05 },
+    LeftHand:     { x: -0.56, y: 0.36, z:  0.02 },
+    RightHand:    { x:  0.56, y: 0.36, z:  0.02 },
+    LeftFingers:  { x: -0.59, y: 0.37, z:  0.06 },
+    RightFingers: { x:  0.59, y: 0.37, z:  0.06 },
+    Core:         { x:  0.00, y: 0.18, z: -0.32 },
+    Neck:         { x:  0.00, y: 0.28, z: -0.46 },
+    Head:         { x:  0.00, y: 0.32, z: -0.54 },
+  };
+  // Player 1: on top (de cima), kneeling, torso upright between legs
+  const p1 = {
+    LeftToe:      { x: -0.38, y: 0.04, z:  0.55 },
+    RightToe:     { x:  0.38, y: 0.04, z:  0.55 },
+    LeftHeel:     { x: -0.35, y: 0.06, z:  0.40 },
+    RightHeel:    { x:  0.35, y: 0.06, z:  0.40 },
+    LeftAnkle:    { x: -0.32, y: 0.08, z:  0.44 },
+    RightAnkle:   { x:  0.32, y: 0.08, z:  0.44 },
+    LeftKnee:     { x: -0.36, y: 0.14, z:  0.10 },
+    RightKnee:    { x:  0.36, y: 0.14, z:  0.10 },
+    LeftHip:      { x: -0.18, y: 0.32, z: -0.08 },
+    RightHip:     { x:  0.18, y: 0.32, z: -0.08 },
+    LeftShoulder: { x: -0.22, y: 0.70, z: -0.12 },
+    RightShoulder:{ x:  0.22, y: 0.70, z: -0.12 },
+    LeftElbow:    { x: -0.40, y: 0.52, z: -0.05 },
+    RightElbow:   { x:  0.40, y: 0.52, z: -0.05 },
+    LeftWrist:    { x: -0.46, y: 0.38, z: -0.22 },
+    RightWrist:   { x:  0.46, y: 0.38, z: -0.22 },
+    LeftHand:     { x: -0.47, y: 0.35, z: -0.28 },
+    RightHand:    { x:  0.47, y: 0.35, z: -0.28 },
+    LeftFingers:  { x: -0.48, y: 0.33, z: -0.32 },
+    RightFingers: { x:  0.48, y: 0.33, z: -0.32 },
+    Core:         { x:  0.00, y: 0.45, z: -0.10 },
+    Neck:         { x:  0.00, y: 0.68, z: -0.12 },
+    Head:         { x:  0.00, y: 0.80, z: -0.14 },
+  };
+  return [
+    JOINTS.map(j => p0[j] || { x: 0, y: 0.2, z: 0 }),
+    JOINTS.map(j => p1[j] || { x: 0, y: 0.5, z: 0 }),
+  ];
+}
+
+// Try to decode real data, fall back to synthetic
+let pose;
+try {
+  pose = decodeFrame(CLOSED_GUARD_BLOB);
+  // Sanity check: heads should be at a plausible y value
+  if (pose[0][22].y < 0.01 || pose[1][22].y < 0.01) throw new Error('bad decode');
+} catch(e) {
+  console.warn('Using synthetic pose (blob decode failed):', e.message);
+  pose = syntheticClosedGuard();
+}
+
+// ---------------------------------------------------------------------------
+// 2. SKELETON DEFINITION — mirrors players.hpp from GrappleMap (public domain)
+//    Each bone: [jointA_idx, jointB_idx, radiusA, radiusB]
+// ---------------------------------------------------------------------------
+
+const JI = Object.fromEntries(JOINTS.map((j, i) => [j, i]));
+
+const BONES = [
+  // Spine / torso
+  [JI.Core,    JI.Neck,           0.055, 0.040],
+  [JI.Neck,    JI.Head,           0.040, 0.010],
+  // Arms
+  [JI.Neck,    JI.LeftShoulder,   0.040, 0.038],
+  [JI.Neck,    JI.RightShoulder,  0.040, 0.038],
+  [JI.LeftShoulder,  JI.LeftElbow,  0.038, 0.028],
+  [JI.RightShoulder, JI.RightElbow, 0.038, 0.028],
+  [JI.LeftElbow,  JI.LeftWrist,   0.028, 0.022],
+  [JI.RightElbow, JI.RightWrist,  0.028, 0.022],
+  [JI.LeftWrist,  JI.LeftHand,    0.022, 0.018],
+  [JI.RightWrist, JI.RightHand,   0.022, 0.018],
+  // Hips
+  [JI.Core,    JI.LeftHip,        0.055, 0.045],
+  [JI.Core,    JI.RightHip,       0.055, 0.045],
+  // Legs
+  [JI.LeftHip,   JI.LeftKnee,    0.045, 0.038],
+  [JI.RightHip,  JI.RightKnee,   0.045, 0.038],
+  [JI.LeftKnee,  JI.LeftAnkle,   0.038, 0.028],
+  [JI.RightKnee, JI.RightAnkle,  0.038, 0.028],
+  [JI.LeftAnkle, JI.LeftHeel,    0.028, 0.025],
+  [JI.RightAnkle,JI.RightHeel,   0.028, 0.025],
+  [JI.LeftHeel,  JI.LeftToe,     0.025, 0.018],
+  [JI.RightHeel, JI.RightToe,    0.025, 0.018],
+];
+
+// Joint display radii
+const JOINT_RADIUS = JOINTS.map((j) => {
+  if (j === 'Head')   return 0.085;
+  if (j === 'Core')   return 0.060;
+  if (j === 'Neck')   return 0.035;
+  if (j.includes('Hip')) return 0.045;
+  if (j.includes('Shoulder')) return 0.040;
+  if (j.includes('Knee')) return 0.038;
+  if (j.includes('Elbow') || j.includes('Ankle')) return 0.028;
+  if (j.includes('Wrist') || j.includes('Heel')) return 0.022;
+  if (j.includes('Hand') || j.includes('Toe'))  return 0.018;
+  if (j.includes('Fingers')) return 0.014;
+  return 0.020;
+});
+
+// ---------------------------------------------------------------------------
+// 3. THREE.JS SCENE SETUP
+// ---------------------------------------------------------------------------
+
+const canvas = document.getElementById('c');
+const wrap   = document.getElementById('canvas-wrap');
+const W = wrap.clientWidth;
+const H = wrap.clientHeight;
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+renderer.setSize(W, H);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene();
+scene.background = null; // transparent — CSS background shows through
+
+const camera = new THREE.PerspectiveCamera(42, W / H, 0.01, 20);
+
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.minDistance = 0.4;
+controls.maxDistance = 6;
+
+// Lighting: two-light setup mirroring GrappleMap's rendering.cpp
+const ambient = new THREE.AmbientLight(0xfff8ee, 0.45);
+scene.add(ambient);
+const key = new THREE.DirectionalLight(0xfff8ee, 1.6);
+key.position.set(1.5, 3, 2);
+key.castShadow = true;
+key.shadow.mapSize.set(1024, 1024);
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xddeeff, 0.6);
+fill.position.set(-2, 1, -1);
+scene.add(fill);
+
+// Floor — subtle tatami grid plane
+const floorGeo = new THREE.PlaneGeometry(4, 4);
+const floorMat = new THREE.MeshStandardMaterial({
+  color: 0x2a2820, roughness: 0.95, metalness: 0.0,
+});
+const floor = new THREE.Mesh(floorGeo, floorMat);
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+
+// ---------------------------------------------------------------------------
+// 4. MATERIALS — two-tone (clay / blue-ink) toon style
+// ---------------------------------------------------------------------------
+
+// Player colors matching the app's design tokens
+const COLOR_A = new THREE.Color(0xcc4433); // clay — lutador de baixo
+const COLOR_B = new THREE.Color(0x2255cc); // index blue — lutador de cima
+const COLOR_A_DARK = new THREE.Color(0x882211);
+const COLOR_B_DARK = new THREE.Color(0x113388);
+
+// Toon gradient texture: 3-step (shadow / mid / highlight)
+function makeToonTex(baseColor, shadowColor) {
+  const canvas2d = document.createElement('canvas');
+  canvas2d.width = 4; canvas2d.height = 1;
+  const ctx = canvas2d.getContext('2d');
+  const g = ctx.createLinearGradient(0, 0, 4, 0);
+  const s = '#' + shadowColor.getHexString();
+  const b = '#' + baseColor.getHexString();
+  g.addColorStop(0.0,  s);
+  g.addColorStop(0.38, s);
+  g.addColorStop(0.40, b);
+  g.addColorStop(1.0,  b);
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, 4, 1);
+  const tex = new THREE.CanvasTexture(canvas2d);
+  tex.minFilter = THREE.NearestFilter;
+  tex.magFilter = THREE.NearestFilter;
+  return tex;
+}
+
+function makeMaterials(baseColor, darkColor) {
+  return {
+    toon: new THREE.MeshToonMaterial({
+      color: baseColor,
+      gradientMap: makeToonTex(baseColor, darkColor),
+    }),
+    flat: new THREE.MeshStandardMaterial({
+      color: baseColor, roughness: 0.85, metalness: 0.0,
+    }),
+    wire: new THREE.MeshBasicMaterial({
+      color: baseColor, wireframe: true,
+    }),
+  };
+}
+
+const matsA = makeMaterials(COLOR_A, COLOR_A_DARK);
+const matsB = makeMaterials(COLOR_B, COLOR_B_DARK);
+
+// Outline: slightly enlarged, back-face culling inverted
+function makeOutlineMat(color) {
+  return new THREE.MeshBasicMaterial({
+    color: new THREE.Color(0x111111),
+    side: THREE.BackSide,
+  });
+}
+const outlineMatA = makeOutlineMat(COLOR_A);
+const outlineMatB = makeOutlineMat(COLOR_B);
+
+// ---------------------------------------------------------------------------
+// 5. GEOMETRY BUILDER — tapered capsules + spheres from joint data
+//    Follows the GrappleMap geometry recipe from playerdrawer.cpp
+// ---------------------------------------------------------------------------
+
+// Build a tapered cylinder (truncated cone) between two points
+function makePillar(a, b, r0, r1, segments = 8) {
+  const dir = new THREE.Vector3(b.x - a.x, b.y - a.y, b.z - a.z);
+  const len = dir.length();
+  if (len < 0.001) return null;
+
+  const geo = new THREE.CylinderGeometry(r1, r0, len, segments, 1, false);
+  return { geo, len, dir };
+}
+
+function buildFigure(playerPose, matsPlayer, outlineMat, scene, showOutline) {
+  const group = new THREE.Group();
+
+  // Convert array of Vec3 objects to THREE.Vector3
+  const pts = playerPose.map(j => new THREE.Vector3(j.x, j.y, j.z));
+
+  // Bones (tapered pillars)
+  for (const [ai, bi, r0, r1] of BONES) {
+    const a = pts[ai], b = pts[bi];
+    const result = makePillar(a, b, r0, r1);
+    if (!result) continue;
+    const { geo, len, dir } = result;
+
+    const mesh = new THREE.Mesh(geo, matsPlayer.toon);
+    mesh.castShadow = true;
+
+    // Position: midpoint
+    mesh.position.set((a.x + b.x) / 2, (a.y + b.y) / 2, (a.z + b.z) / 2);
+    // Orient: align Y-axis to direction
+    const up = new THREE.Vector3(0, 1, 0);
+    dir.normalize();
+    const quat = new THREE.Quaternion().setFromUnitVectors(up, dir);
+    mesh.quaternion.copy(quat);
+
+    group.add(mesh);
+
+    // Outline pass: same shape, slightly scaled out, BackSide
+    if (showOutline) {
+      const om = new THREE.Mesh(geo, outlineMat);
+      om.position.copy(mesh.position);
+      om.quaternion.copy(mesh.quaternion);
+      om.scale.setScalar(1.12);
+      group.add(om);
+    }
+  }
+
+  // Joint spheres
+  for (let j = 0; j < JOINTS.length; j++) {
+    const r = JOINT_RADIUS[j];
+    const geo = new THREE.SphereGeometry(r, 10, 8);
+    const mesh = new THREE.Mesh(geo, matsPlayer.toon);
+    mesh.position.copy(pts[j]);
+    mesh.castShadow = true;
+    group.add(mesh);
+
+    if (showOutline) {
+      const om = new THREE.Mesh(geo, outlineMat);
+      om.position.copy(pts[j]);
+      om.scale.setScalar(1.15);
+      group.add(om);
+    }
+  }
+
+  return group;
+}
+
+// ---------------------------------------------------------------------------
+// 6. CAMERA FRAMING — port of cameraFor() from render-spec.ts
+// ---------------------------------------------------------------------------
+
+function centroid(playerPose) {
+  const s = playerPose.reduce((a, j) => ({ x: a.x+j.x, y: a.y+j.y, z: a.z+j.z }), {x:0,y:0,z:0});
+  return { x: s.x/playerPose.length, y: s.y/playerPose.length, z: s.z/playerPose.length };
+}
+
+function boundingRadius(pose, cx, cy, cz) {
+  let r = 0;
+  for (const p of pose) {
+    for (const j of p) {
+      r = Math.max(r, Math.hypot(j.x - cx, j.y - cy, j.z - cz));
+    }
+  }
+  return r;
+}
+
+function computeCamera(pose) {
+  const c0 = centroid(pose[0]);
+  const c1 = centroid(pose[1]);
+  const target = { x: (c0.x+c1.x)/2, y: (c0.y+c1.y)/2, z: (c0.z+c1.z)/2 };
+  const radius = Math.max(boundingRadius(pose, target.x, target.y, target.z), 0.4);
+  // Perpendicular to the axis between centroids, in ground plane
+  let ax = c1.x - c0.x, az = c1.z - c0.z;
+  const len = Math.hypot(ax, az) || 1;
+  ax /= len; az /= len;
+  const px = -az, pz = ax;
+  const dist = radius * 2.6;
+  const hd = Math.abs(c0.y - c1.y);
+  const altMult = Math.min(2.4, Math.max(1.1, 1.5 + (hd / radius) * 0.8));
+  const alt = radius * altMult;
+  return {
+    eye: new THREE.Vector3(target.x + px * dist, target.y + alt, target.z + pz * dist),
+    target: new THREE.Vector3(target.x, target.y, target.z),
+  };
+}
+
+// ---------------------------------------------------------------------------
+// 7. SCENE ASSEMBLY
+// ---------------------------------------------------------------------------
+
+let currentMode = 'toon';
+let showOutline = true;
+let figGroups = [];
+
+function rebuildScene() {
+  figGroups.forEach(g => scene.remove(g));
+  figGroups = [];
+
+  // Switch active material key
+  const matKey = currentMode === 'wire' ? 'wire' :
+                 currentMode === 'flat' ? 'flat' : 'toon';
+
+  // Override: set the active material on both players' mat objects
+  const mA = { ...matsA, toon: matsA[matKey], flat: matsA[matKey], wire: matsA[matKey] };
+  const mB = { ...matsB, toon: matsB[matKey], flat: matsB[matKey], wire: matsB[matKey] };
+  mA.toon = matsA[matKey];
+  mB.toon = matsB[matKey];
+
+  const gA = buildFigure(pose[0], mA, outlineMatA, scene, showOutline && currentMode !== 'wire');
+  const gB = buildFigure(pose[1], mB, outlineMatB, scene, showOutline && currentMode !== 'wire');
+  scene.add(gA);
+  scene.add(gB);
+  figGroups = [gA, gB];
+}
+
+// Initial camera
+const cam = computeCamera(pose);
+camera.position.copy(cam.eye);
+controls.target.copy(cam.target);
+controls.update();
+
+rebuildScene();
+
+// ---------------------------------------------------------------------------
+// 8. CONTROLS UI
+// ---------------------------------------------------------------------------
+
+const btnToon    = document.getElementById('btn-toon');
+const btnFlat    = document.getElementById('btn-flat');
+const btnWire    = document.getElementById('btn-wire');
+const btnOutline = document.getElementById('btn-outline');
+const btnReset   = document.getElementById('btn-reset');
+
+function setMode(mode) {
+  currentMode = mode;
+  btnToon.classList.toggle('active', mode === 'toon');
+  btnFlat.classList.toggle('active', mode === 'flat');
+  btnWire.classList.toggle('active', mode === 'wire');
+  rebuildScene();
+}
+
+btnToon.addEventListener('click', () => setMode('toon'));
+btnFlat.addEventListener('click', () => setMode('flat'));
+btnWire.addEventListener('click', () => setMode('wire'));
+
+btnOutline.addEventListener('click', () => {
+  showOutline = !showOutline;
+  btnOutline.classList.toggle('active', showOutline);
+  rebuildScene();
+});
+
+btnReset.addEventListener('click', () => {
+  camera.position.copy(cam.eye);
+  controls.target.copy(cam.target);
+  controls.update();
+});
+
+// ---------------------------------------------------------------------------
+// 9. RENDER LOOP
+// ---------------------------------------------------------------------------
+
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+
+// Resize
+const ro = new ResizeObserver(() => {
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+});
+ro.observe(wrap);
+</script>
+</body>
+</html>

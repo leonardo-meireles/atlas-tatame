@@ -1,0 +1,10 @@
+[
+  { "slug": "armlock-da-guarda", "file": "armlock-da-guarda.png" },
+  { "slug": "triangulo", "file": "triangulo.png" },
+  { "slug": "kimura-da-guarda", "file": "kimura-da-guarda.png" },
+  { "slug": "estrangulamento-cruzado", "file": "estrangulamento-cruzado.png" },
+  { "slug": "raspagem-de-quadril", "file": "raspagem-de-quadril.png" },
+  { "slug": "raspagem-de-balao", "file": "raspagem-de-balao.png" },
+  { "slug": "abertura-e-passagem", "file": "abertura-e-passagem.png" },
+  { "slug": "raspagem-de-tesoura", "file": "raspagem-de-tesoura.png" }
+]

@@ -1,0 +1,336 @@
+/* source("../") escopa a auto-detecção de classes só ao código em src/ — fora gan-harness/,
+   docs/, .claude/ etc., cujos .md mencionam tokens (ex: var(--step-*)) que o Tailwind senão
+   pegaria como classe e geraria CSS inválido (quebra o Turbopack em dev). */
+@import "tailwindcss" source("../");
+
+/* ============================================================
+   webapp-jiu — "O Mapa" design tokens
+   Atlas cartográfico em papel quente. Tema claro fixo (sem
+   dark-glow de IA). Cores em OKLCH, neutros tingidos pro acento.
+   ============================================================ */
+
+:root {
+  /* --- Superfícies (lona de kimono crua — oat/osso, contraste alto) ---
+     Separação figura/fundo aumentada: --paper (fundo) e --paper-2 (card elevado)
+     agora distam ~0.052 de luz (antes 0.03, perto demais → tudo achatado). Cards
+     destacam do fundo sem sombra pesada. --paper-sunk = sulco/recuo (input, well).
+     --paper-edge mais escura/definida pra a borda do card ler de fato. */
+  --paper:        oklch(0.952 0.006 92);   /* fundo principal (gi cru) */
+  --paper-2:      oklch(0.90 0.009 90);    /* superfície elevada / card (afastada do fundo) */
+  --paper-sunk:   oklch(0.872 0.011 88);   /* recuo / well / input sobre o card */
+  --paper-edge:   oklch(0.80 0.014 86);    /* borda / linha fina (mais definida) */
+  --ink:          oklch(0.205 0.01 64);    /* texto principal (quase-preto) */
+  --ink-soft:     oklch(0.40 0.012 66);    /* texto secundário */
+  --ink-faint:    oklch(0.49 0.012 70);    /* labels / metadados (AA sobre paper-2) */
+
+  /* --- Tatame escuro (a lona do dojo — canvas dramático do grafo) --- */
+  --mat:          oklch(0.235 0.01 78);    /* lona escura */
+  --mat-2:        oklch(0.285 0.011 80);   /* tile / superfície sobre a lona */
+  --mat-line:     oklch(0.40 0.012 80);    /* costura entre tiles */
+  --on-mat:       oklch(0.93 0.008 88);    /* texto/osso sobre a lona */
+  --on-mat-soft:  oklch(0.74 0.01 82);
+
+  /* --- Acento de marca: faixa — vermelho-couro profundo --- */
+  --clay:         oklch(0.52 0.16 32);
+  --clay-deep:    oklch(0.42 0.15 33);
+  --clay-tint:    oklch(0.90 0.045 40);
+  --clay-on-mat:  oklch(0.64 0.17 32);
+
+  /* --- Acento secundário: GRAU — latão/ouro-velho (direção "Faixa-Graduada") ---
+     Cor de ênfase de SEGUNDO nível: grau/módulo, selo de progresso, destaque que
+     NÃO é a marca. Hue 78 (ouro frio) convive com clay (hue 32) sem competir — um
+     puxa vermelho-couro, o outro latão fosco. Croma baixo (0.09) = metal velho, não
+     dourado de IA. --grau-deep p/ texto sobre papel (AA), --grau (0.62) p/ acento/
+     borda/ícone, --grau-tint p/ chip de fundo claro, --grau-on-mat p/ ler na lona. */
+  --grau:         oklch(0.62 0.09 78);     /* acento/borda/ícone de ênfase */
+  --grau-deep:    oklch(0.48 0.082 76);    /* texto de grau sobre papel (AA) */
+  --grau-tint:    oklch(0.91 0.045 82);    /* chip/fundo de ênfase claro */
+  --grau-on-mat:  oklch(0.76 0.10 80);     /* grau legível sobre a lona escura */
+
+  /* --- Cores funcionais por tipo (cor = significado; legíveis em papel E lona) --- */
+  --raspagem:     oklch(0.52 0.1 166);     /* jade — vira o jogo */
+  --raspagem-tint:oklch(0.92 0.035 166);
+  --raspagem-on-mat: oklch(0.72 0.12 166);
+  --finalizacao:  oklch(0.5 0.17 26);      /* sangue — acaba o jogo */
+  --finalizacao-tint: oklch(0.91 0.04 28);
+  --finalizacao-on-mat: oklch(0.66 0.18 26);
+  --perda:        oklch(0.6 0.1 74);       /* ocre — atenção */
+  --perda-tint:   oklch(0.92 0.04 80);
+  --perda-on-mat: oklch(0.76 0.11 78);
+  --passagem:     oklch(0.48 0.11 264);    /* índigo — o topo vence a guarda */
+  --passagem-tint:oklch(0.91 0.035 266);
+  --passagem-on-mat: oklch(0.70 0.12 266);
+
+  /* --- Tipografia: escala modular fixa (app UI) ---
+     Razão ~1.2 (terça menor) nos degraus de display; degraus de corpo/rótulo abaixo
+     de --step-0 single-source o texto miúdo (lede, labels, microcópia) que antes vivia
+     em rem soltos (1.05/0.95/0.92/0.85/0.82/0.78/0.7/0.62rem). Nada de px/rem ad-hoc. */
+  --step-4xs: 0.56rem;   /* plate caption / micro-rótulo serigrafia */
+  --step-3xs: 0.625rem;  /* rótulo de legenda / eyebrow miúdo */
+  --step-2xs: 0.7rem;    /* label uppercase / stat caption */
+  --step-xs: 0.78rem;   /* eyebrow padrão / microcópia / nota de dataset */
+  --step-0s: 0.9rem;    /* corpo miúdo (item de lista, pitch, nó do mapa) */
+  --step-0:  0.95rem;   /* corpo/lede padrão */
+  --step-0r: 1rem;      /* corpo de leitura (parágrafos longos: princípios, contraste) */
+  --step-0h: 1.05rem;   /* lede de destaque (hero/seção) */
+  --step-0t: 1.15rem;   /* subtítulo de card (h3 "Como funciona") */
+  --step-1:  1.333rem;
+  --step-1h: 1.5rem;     /* meio-degrau entre --step-1 e --step-2 (h2 de seção; evita 1.6rem cravado) */
+  --step-2:  1.777rem;
+  --step-3:  2.369rem;
+  --step-4:  clamp(2.6rem, 1.8rem + 4vw, 4.2rem);  /* heróis */
+
+  /* --- Espaço: 4pt, nomes semânticos --- */
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  /* --- Motion: easing/durações single-source pra delight (fincado, não saltitante) ---
+     --ease-fincado = o cubic-bezier de saída assentada usado na cascata lamina/saida-row.
+     Centralizar evita drift e prepara stagger de entrada on-brand sem mexer noutros arquivos. */
+  --ease-fincado: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-lamina: 380ms;
+  --dur-conteudo: 460ms;
+  --dur-cascata: 420ms;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-paper-edge: var(--paper-edge);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-clay: var(--clay);
+  --color-clay-deep: var(--clay-deep);
+  --color-clay-tint: var(--clay-tint);
+  --color-clay-on-mat: var(--clay-on-mat);
+  --color-grau: var(--grau);
+  --color-grau-deep: var(--grau-deep);
+  --color-grau-tint: var(--grau-tint);
+  --color-grau-on-mat: var(--grau-on-mat);
+  --color-mat: var(--mat);
+  --color-mat-2: var(--mat-2);
+  --color-mat-line: var(--mat-line);
+  --color-on-mat: var(--on-mat);
+  --color-on-mat-soft: var(--on-mat-soft);
+  --color-raspagem: var(--raspagem);
+  --color-raspagem-tint: var(--raspagem-tint);
+  --color-finalizacao: var(--finalizacao);
+  --color-finalizacao-tint: var(--finalizacao-tint);
+  --color-perda: var(--perda);
+  --color-perda-tint: var(--perda-tint);
+  --color-passagem: var(--passagem);
+  --color-passagem-tint: var(--passagem-tint);
+
+  --font-display: var(--font-bricolage), Georgia, serif;
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--paper-edge);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  /* piso de ritmo vertical: tamanho/leading de corpo coerentes; heróis sobrescrevem
+     com leading-tight/[0.98] como já fazem. */
+  font-size: var(--step-0);
+  line-height: 1.6;
+  font-feature-settings: "ss01", "cv01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* sutil grão de papel — sulcos cartográficos */
+  background-image:
+    radial-gradient(oklch(0.5 0.02 60 / 0.025) 0.5px, transparent 0.5px);
+  background-size: 4px 4px;
+}
+
+::selection {
+  background: var(--clay-tint);
+  color: var(--clay-deep);
+}
+
+/* Refino editorial do display (Bricolage é variável → responde a optical sizing).
+   Unifica os terminais/inktraps com o corpo (ss01) e adiciona caráter (ss02, cv01)
+   nos heróis e títulos .font-display, que antes não recebiam nenhum feature. */
+.font-display {
+  font-feature-settings: "ss01", "ss02", "cv01";
+  font-optical-sizing: auto;
+}
+
+/* Typeset progressivo (progressive-enhancement, não quebra nada):
+   - balance equilibra títulos curtos de 2-3 linhas (evita órfãs feias nos heróis);
+   - pretty cuida da última-linha-órfã em parágrafos/listas de leitura. */
+:where(h1, h2, h3, .font-display) {
+  text-wrap: balance;
+}
+:where(p, li) {
+  text-wrap: pretty;
+}
+
+/* Lona de tatame — tiles intertravados de EVA + trama sutil. Canvas do grafo. */
+.tatame {
+  background-color: var(--mat);
+  background-image:
+    /* costuras dos tiles (puzzle EVA) */
+    repeating-linear-gradient(
+      0deg,
+      color-mix(in oklch, var(--mat-line) 55%, transparent) 0 1.5px,
+      transparent 1.5px 96px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in oklch, var(--mat-line) 55%, transparent) 0 1.5px,
+      transparent 1.5px 96px
+    ),
+    /* trama fina do tatame */
+    repeating-linear-gradient(
+      0deg,
+      color-mix(in oklch, var(--on-mat) 4%, transparent) 0 1px,
+      transparent 1px 5px
+    );
+}
+
+/* Foco visível por teclado — acessibilidade. */
+:where(a, button, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+
+/* Toque leve anti-cópia em blocos de conteúdo (não é DRM, só atrito). */
+.no-copy {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.no-copy img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Entrada do card expandido — a "lâmina" sobe e revela (figura, depois texto). */
+@keyframes lamina-sobe {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes conteudo-sobe {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lamina-enter {
+  animation: lamina-sobe var(--dur-lamina) var(--ease-fincado) both;
+}
+.lamina-figura {
+  animation: conteudo-sobe var(--dur-conteudo) var(--ease-fincado) 70ms both;
+}
+.lamina-corpo {
+  animation: conteudo-sobe var(--dur-conteudo) var(--ease-fincado) 150ms both;
+}
+/* Lista "daqui você pode" — revela em cascata (delay por índice via --i). */
+.saida-row {
+  animation: conteudo-sobe var(--dur-cascata) var(--ease-fincado) both;
+  animation-delay: calc(220ms + var(--i, 0) * 45ms);
+}
+/* Figura (pictograma SVG) — surge suave em vez de popar quando a pose carrega. */
+@keyframes figura-surge {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.figura-surge {
+  animation: figura-surge var(--dur-cascata) var(--ease-fincado) both;
+}
+/* Gesto do professor apontando: ao ativar um callout, a seta "assenta" no tatame —
+   o traço engrossa e volta UMA vez (decidido, não loop de bounce). Disparar trocando
+   a key/classe no elemento ativo (setas-overlay). Reduced-motion já neutraliza abaixo. */
+@keyframes seta-assenta {
+  0% {
+    stroke-width: var(--seta-w, 2);
+  }
+  55% {
+    stroke-width: calc(var(--seta-w, 2) * 1.6);
+  }
+  100% {
+    stroke-width: var(--seta-w, 2);
+  }
+}
+.seta-assenta {
+  animation: seta-assenta var(--dur-lamina) var(--ease-fincado) both;
+}
+/* Card de nó no mapa — hover acende a borda (cor do tipo) + sombra mais funda. */
+.node-card:hover {
+  border-color: color-mix(in oklch, var(--card-cor, var(--mat-line)) 80%, white 12%) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--card-cor, transparent) 30%, transparent),
+    0 14px 34px -14px oklch(0 0 0 / 0.75) !important;
+}
+/* Miniatura faz leve zoom no hover do card (sensação tátil, sem reflow). */
+.node-card .figura-surge,
+.node-card img {
+  transition: transform 320ms var(--ease-fincado);
+}
+.node-card:hover .figura-surge,
+.node-card:hover img {
+  transform: scale(1.04);
+}
+/* Dica do mapa — entra de cima, sai com fade. */
+@keyframes hint-baixa {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes hint-fade {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

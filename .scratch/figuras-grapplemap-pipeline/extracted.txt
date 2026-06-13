@@ -1,0 +1,435 @@
+
+### CLOSED GUARD candidates:
+  id=14 "octopus\nclosed guard" tags=[full_guard,closed_guard,octopus,top_kneeling,bottom_post_hand]
+  id=58 "standing vs\narm-pinnen\nclosed guard" tags=[closed_guard,bottom_supine,standing]
+  id=71 "bottom defeating\nhip post in\nclosed guard" tags=[full_guard,closed_guard,bottom_supine,top_kneeling]
+  id=166 "closed guard\nhomie" tags=[full_guard,closed_guard,bottom_turned_in,top_kneeling,top_posture_broken,homie,bottom_underhook]
+  id=210 "seated closed guard\nw/ double unders" tags=[full_guard,bottom_double_unders,bottom_seated,top_kneeling,closed_guard]
+  id=220 "closed guard w/\ndouble unders" tags=[full_guard,closed_guard,bottom_double_unders,top_posture_broken,top_post_hand,bottom_supine]
+  id=265 "distance\nclosed guard" tags=[full_guard,closed_guard,bottom_supine,top_kneeling]
+  id=375 "closed guard\nw/ arm trapped" tags=[closed_guard,full_guard,bottom_supine,top_kneeling,top_posture_broken]
+  id=376 "closed guard\nw/ 100%" tags=[closed_guard,full_guard,bottom_supine,top_kneeling,top_posture_broken]
+  id=426 "closed guard\nw/ over/under\ncollar" tags=[closed_guard,collar_tie,top_posture_broken,bottom_supine]
+  id=427 "closed guard w/\ndouble under\ncollar" tags=[closed_guard,collar_tie,top_posture_broken,bottom_supine,full_guard]
+  id=457 "full guard w/\nbicep control\nvs double collar" tags=[collar_tie,full_guard,closed_guard,bottom_supine,top_kneeling]
+  id=476 "closed guard\nw/ overhook\nvs arm pin" tags=[bottom_supine,top_kneeling,bottom_overhook,closed_guard,full_guard]
+  id=540 "closed guard\nw/ overhook\n+ collar tie" tags=[collar_tie,bottom_overhook,top_kneeling,closed_guard,bottom_supine]
+  id=581 "closed guard\nw/ head&arm\nvs neck frame" tags=[frame,bottom_supine,closed_guard,full_guard,top_posture_broken,top_kneeling]
+
+### MOUNT candidates:
+  id=150 "mount" tags=[mount,bottom_supine,top_post_hand]
+  id=165 "high mount\nw/ one\narm trapped" tags=[mount,bottom_supine,top_kneeling]
+  id=190 "mounted\ntriangle" tags=[mount,triangle,bottom_supine]
+  id=203 "mount w/\ndouble unders" tags=[mount,top_double_unders,top_underhook,bottom_supine]
+  id=204 "mount w/\nhead&arm" tags=[mount,crossface,top_underhook,bottom_supine]
+  id=206 "mounted\narm triangle" tags=[arm_triangle,mount,bottom_supine]
+  id=218 "postured up\nmount" tags=[mount,bottom_supine,top_kneeling]
+  id=255 "rolled\nonto side\nin mount" tags=[mount,bottom_on_side,bottom_turned_away]
+  id=351 "mount w/\nhead&armpit" tags=[mount,bottom_supine,crossface]
+  id=352 "strike threat\nfrom mount" tags=[mount,bottom_supine]
+  id=530 "mount vs\nbody lock" tags=[mount,bottom_supine,top_kneeling]
+  id=538 "low\nmount" tags=[mount,bottom_supine,top_kneeling]
+
+### SWEEP-ish neighbourhood candidates:
+  id=55 "full guard\noctopus\nhip bump"
+  id=169 "pinned arm\nsweep start"
+  id=213 "modified jean\njacques sweep"
+  id=231 "halfway\npendulum\nsweep"
+  id=232 "hip bump\nsweep w/\nhand post"
+  id=233 "hip bump\nsweep w/\nelbow post"
+  id=323 "blocked\nbutterfly\noverhook sweep"
+  id=470 "x-guard\nsweep"
+
+>>> CHOSEN closed_guard: id=265 "distance\nclosed guard"
+# ===== closed_guard | distance\nclosed guard =====
+POSE = {
+    'p0': {
+        'LeftToe': (-0.445, -0.418, 0.025),
+        'RightToe': (-0.596, -0.091, 0.025),
+        'LeftHeel': (-0.260, -0.347, 0.144),
+        'RightHeel': (-0.429, -0.028, 0.168),
+        'LeftAnkle': (-0.278, -0.366, 0.060),
+        'RightAnkle': (-0.468, 0.011, 0.095),
+        'LeftKnee': (0.138, -0.267, 0.068),
+        'RightKnee': (-0.136, 0.280, 0.052),
+        'LeftHip': (-0.252, -0.243, 0.254),
+        'RightHip': (-0.351, -0.034, 0.248),
+        'LeftShoulder': (0.148, -0.125, 0.546),
+        'RightShoulder': (0.007, 0.189, 0.546),
+        'LeftElbow': (0.195, -0.138, 0.259),
+        'RightElbow': (-0.011, 0.245, 0.260),
+        'LeftWrist': (0.304, 0.098, 0.219),
+        'RightWrist': (0.255, 0.199, 0.223),
+        'LeftHand': (0.341, 0.141, 0.277),
+        'RightHand': (0.311, 0.238, 0.266),
+        'LeftFingers': (0.391, 0.202, 0.254),
+        'RightFingers': (0.379, 0.259, 0.228),
+        'Core': (-0.215, -0.094, 0.477),
+        'Neck': (0.093, 0.040, 0.583),
+        'Head': (0.208, 0.094, 0.691),
+    },
+    'p1': {
+        'LeftToe': (-0.587, -0.441, 0.414),
+        'RightToe': (-0.710, -0.310, 0.546),
+        'LeftHeel': (-0.416, -0.340, 0.295),
+        'RightHeel': (-0.586, -0.211, 0.382),
+        'LeftAnkle': (-0.458, -0.327, 0.371),
+        'RightAnkle': (-0.561, -0.257, 0.457),
+        'LeftKnee': (-0.374, 0.090, 0.417),
+        'RightKnee': (-0.134, -0.307, 0.412),
+        'LeftHip': (-0.013, 0.124, 0.183),
+        'RightHip': (0.094, -0.074, 0.129),
+        'LeftShoulder': (0.460, 0.440, 0.156),
+        'RightShoulder': (0.612, 0.139, 0.145),
+        'LeftElbow': (0.214, 0.542, 0.045),
+        'RightElbow': (0.552, -0.132, 0.054),
+        'LeftWrist': (0.057, 0.345, 0.105),
+        'RightWrist': (0.299, -0.041, 0.062),
+        'LeftHand': (0.052, 0.343, 0.187),
+        'RightHand': (0.319, -0.063, 0.137),
+        'LeftFingers': (0.074, 0.278, 0.225),
+        'RightFingers': (0.268, -0.060, 0.196),
+        'Core': (0.246, 0.146, 0.102),
+        'Neck': (0.578, 0.311, 0.172),
+        'Head': (0.684, 0.358, 0.287),
+    },
+}
+
+
+>>> CHOSEN mount: id=150 "mount"
+# ===== mount | mount =====
+POSE = {
+    'p0': {
+        'LeftToe': (0.030, -0.631, 0.040),
+        'RightToe': (-0.112, -0.651, 0.040),
+        'LeftHeel': (-0.009, -0.503, 0.229),
+        'RightHeel': (-0.073, -0.510, 0.221),
+        'LeftAnkle': (0.062, -0.508, 0.171),
+        'RightAnkle': (-0.142, -0.523, 0.164),
+        'LeftKnee': (0.348, -0.206, 0.056),
+        'RightKnee': (-0.450, -0.241, 0.050),
+        'LeftHip': (0.053, -0.040, 0.317),
+        'RightHip': (-0.174, -0.048, 0.314),
+        'LeftShoulder': (0.112, 0.513, 0.375),
+        'RightShoulder': (-0.220, 0.535, 0.369),
+        'LeftElbow': (0.334, 0.611, 0.216),
+        'RightElbow': (-0.389, 0.671, 0.177),
+        'LeftWrist': (0.476, 0.784, 0.080),
+        'RightWrist': (-0.485, 0.864, 0.020),
+        'LeftHand': (0.514, 0.853, 0.082),
+        'RightHand': (-0.479, 0.938, 0.054),
+        'LeftFingers': (0.536, 0.897, 0.020),
+        'RightFingers': (-0.498, 1.006, 0.020),
+        'Core': (-0.075, 0.200, 0.323),
+        'Neck': (-0.053, 0.576, 0.375),
+        'Head': (-0.036, 0.743, 0.377),
+    },
+    'p1': {
+        'LeftToe': (-0.247, -0.897, 0.025),
+        'RightToe': (0.178, -0.871, 0.056),
+        'LeftHeel': (-0.239, -0.667, 0.031),
+        'RightHeel': (0.145, -0.644, 0.031),
+        'LeftAnkle': (-0.237, -0.732, 0.096),
+        'RightAnkle': (0.148, -0.700, 0.102),
+        'LeftKnee': (-0.213, -0.488, 0.449),
+        'RightKnee': (0.082, -0.492, 0.472),
+        'LeftHip': (-0.167, -0.204, 0.126),
+        'RightHip': (0.062, -0.213, 0.143),
+        'LeftShoulder': (-0.211, 0.363, 0.096),
+        'RightShoulder': (0.126, 0.362, 0.090),
+        'LeftElbow': (-0.361, 0.121, 0.053),
+        'RightElbow': (0.244, 0.101, 0.045),
+        'LeftWrist': (-0.165, 0.155, 0.225),
+        'RightWrist': (0.113, 0.071, 0.277),
+        'LeftHand': (-0.203, 0.198, 0.278),
+        'RightHand': (0.122, 0.109, 0.348),
+        'LeftFingers': (-0.192, 0.197, 0.359),
+        'RightFingers': (0.065, 0.119, 0.400),
+        'Core': (-0.041, 0.034, 0.100),
+        'Neck': (-0.044, 0.413, 0.106),
+        'Head': (-0.028, 0.568, 0.164),
+    },
+}
+
+
+>>> CHOSEN sweep: id=231 "halfway\npendulum\nsweep"
+# ===== sweep | halfway\npendulum\nsweep =====
+POSE = {
+    'p0': {
+        'LeftToe': (-0.378, -0.559, 0.025),
+        'RightToe': (-0.654, 0.004, 0.026),
+        'LeftHeel': (-0.314, -0.337, 0.030),
+        'RightHeel': (-0.427, -0.033, 0.030),
+        'LeftAnkle': (-0.278, -0.414, 0.047),
+        'RightAnkle': (-0.479, 0.038, 0.030),
+        'LeftKnee': (0.143, -0.341, 0.058),
+        'RightKnee': (-0.194, 0.356, 0.052),
+        'LeftHip': (-0.217, -0.212, 0.261),
+        'RightHip': (-0.336, -0.018, 0.215),
+        'LeftShoulder': (0.154, -0.179, 0.519),
+        'RightShoulder': (0.191, 0.160, 0.510),
+        'LeftElbow': (0.203, -0.310, 0.262),
+        'RightElbow': (0.342, 0.012, 0.315),
+        'LeftWrist': (0.231, -0.060, 0.204),
+        'RightWrist': (0.527, -0.180, 0.292),
+        'LeftHand': (0.224, -0.064, 0.285),
+        'RightHand': (0.560, -0.246, 0.327),
+        'LeftFingers': (0.254, -0.005, 0.329),
+        'RightFingers': (0.582, -0.310, 0.283),
+        'Core': (-0.115, 0.019, 0.363),
+        'Neck': (0.203, -0.012, 0.551),
+        'Head': (0.360, -0.031, 0.605),
+    },
+    'p1': {
+        'LeftToe': (1.070, -0.115, 0.809),
+        'RightToe': (0.009, -0.317, 0.874),
+        'LeftHeel': (0.899, 0.034, 0.769),
+        'RightHeel': (0.124, -0.134, 0.799),
+        'LeftAnkle': (0.941, -0.027, 0.716),
+        'RightAnkle': (0.081, -0.199, 0.760),
+        'LeftKnee': (0.709, -0.054, 0.354),
+        'RightKnee': (0.026, -0.274, 0.340),
+        'LeftHip': (0.393, 0.189, 0.186),
+        'RightHip': (0.179, 0.102, 0.192),
+        'LeftShoulder': (0.521, -0.384, 0.201),
+        'RightShoulder': (0.181, -0.374, 0.160),
+        'LeftElbow': (0.588, -0.117, 0.101),
+        'RightElbow': (0.078, -0.108, 0.098),
+        'LeftWrist': (0.486, -0.070, 0.335),
+        'RightWrist': (-0.136, -0.267, 0.073),
+        'LeftHand': (0.441, -0.122, 0.372),
+        'RightHand': (-0.149, -0.343, 0.074),
+        'LeftFingers': (0.382, -0.162, 0.338),
+        'RightFingers': (-0.102, -0.397, 0.108),
+        'Core': (0.369, -0.063, 0.100),
+        'Neck': (0.347, -0.416, 0.205),
+        'Head': (0.309, -0.569, 0.254),
+    },
+}
+
+
+>>> CG-ALT id=375 "closed guard\nw/ arm trapped"
+# ===== cg_alt_375 | closed guard\nw/ arm trapped =====
+POSE = {
+    'p0': {
+        'LeftToe': (-0.348, -0.547, 0.026),
+        'RightToe': (-0.652, 0.004, 0.026),
+        'LeftHeel': (-0.279, -0.330, 0.032),
+        'RightHeel': (-0.427, -0.033, 0.030),
+        'LeftAnkle': (-0.231, -0.408, 0.037),
+        'RightAnkle': (-0.475, 0.044, 0.030),
+        'LeftKnee': (0.181, -0.313, 0.050),
+        'RightKnee': (-0.187, 0.342, 0.078),
+        'LeftHip': (0.064, -0.115, 0.423),
+        'RightHip': (-0.016, 0.098, 0.401),
+        'LeftShoulder': (0.617, 0.014, 0.404),
+        'RightShoulder': (0.540, 0.291, 0.317),
+        'LeftElbow': (0.419, -0.179, 0.324),
+        'RightElbow': (0.260, 0.209, 0.303),
+        'LeftWrist': (0.400, -0.232, 0.072),
+        'RightWrist': (0.441, 0.021, 0.247),
+        'LeftHand': (0.479, -0.217, 0.079),
+        'RightHand': (0.523, 0.018, 0.256),
+        'LeftFingers': (0.528, -0.239, 0.022),
+        'RightFingers': (0.555, -0.058, 0.250),
+        'Core': (0.250, 0.080, 0.407),
+        'Neck': (0.648, 0.184, 0.401),
+        'Head': (0.798, 0.171, 0.340),
+    },
+    'p1': {
+        'LeftToe': (-0.034, -0.008, 0.729),
+        'RightToe': (0.031, 0.141, 0.799),
+        'LeftHeel': (-0.060, -0.002, 0.498),
+        'RightHeel': (0.007, 0.152, 0.572),
+        'LeftAnkle': (-0.009, 0.044, 0.561),
+        'RightAnkle': (0.069, 0.107, 0.623),
+        'LeftKnee': (0.250, 0.373, 0.502),
+        'RightKnee': (0.409, -0.137, 0.560),
+        'LeftHip': (0.077, 0.127, 0.183),
+        'RightHip': (0.191, -0.069, 0.185),
+        'LeftShoulder': (0.590, 0.398, 0.175),
+        'RightShoulder': (0.689, 0.093, 0.201),
+        'LeftElbow': (0.308, 0.336, 0.191),
+        'RightElbow': (0.453, -0.075, 0.165),
+        'LeftWrist': (0.321, 0.249, 0.436),
+        'RightWrist': (0.456, -0.036, 0.430),
+        'LeftHand': (0.342, 0.210, 0.504),
+        'RightHand': (0.462, 0.010, 0.498),
+        'LeftFingers': (0.370, 0.132, 0.500),
+        'RightFingers': (0.517, 0.072, 0.500),
+        'Core': (0.336, 0.139, 0.100),
+        'Neck': (0.699, 0.263, 0.182),
+        'Head': (0.846, 0.329, 0.212),
+    },
+}
+
+
+>>> CG-ALT id=220 "closed guard w/\ndouble unders"
+# ===== cg_alt_220 | closed guard w/\ndouble unders =====
+POSE = {
+    'p0': {
+        'LeftToe': (0.272, -0.627, 0.025),
+        'RightToe': (-0.472, -0.760, 0.037),
+        'LeftHeel': (0.114, -0.621, 0.190),
+        'RightHeel': (-0.377, -0.616, 0.192),
+        'LeftAnkle': (0.162, -0.552, 0.151),
+        'RightAnkle': (-0.434, -0.603, 0.121),
+        'LeftKnee': (0.169, -0.130, 0.061),
+        'RightKnee': (-0.559, -0.192, 0.084),
+        'LeftHip': (-0.093, 0.048, 0.354),
+        'RightHip': (-0.316, 0.012, 0.379),
+        'LeftShoulder': (-0.107, 0.602, 0.266),
+        'RightShoulder': (-0.416, 0.595, 0.265),
+        'LeftElbow': (0.165, 0.692, 0.229),
+        'RightElbow': (-0.702, 0.614, 0.286),
+        'LeftWrist': (0.189, 0.849, 0.027),
+        'RightWrist': (-0.803, 0.771, 0.089),
+        'LeftHand': (0.169, 0.918, 0.064),
+        'RightHand': (-0.829, 0.848, 0.095),
+        'LeftFingers': (0.180, 0.986, 0.022),
+        'RightFingers': (-0.870, 0.882, 0.035),
+        'Core': (-0.249, 0.270, 0.333),
+        'Neck': (-0.264, 0.665, 0.304),
+        'Head': (-0.340, 0.804, 0.271),
+    },
+    'p1': {
+        'LeftToe': (-0.321, -0.265, 0.627),
+        'RightToe': (-0.159, -0.275, 0.598),
+        'LeftHeel': (-0.263, -0.166, 0.426),
+        'RightHeel': (-0.190, -0.182, 0.393),
+        'LeftAnkle': (-0.325, -0.149, 0.491),
+        'RightAnkle': (-0.148, -0.148, 0.469),
+        'LeftKnee': (-0.536, 0.222, 0.423),
+        'RightKnee': (0.036, 0.243, 0.446),
+        'LeftHip': (-0.320, 0.019, 0.115),
+        'RightHip': (-0.094, 0.045, 0.090),
+        'LeftShoulder': (-0.426, 0.597, 0.116),
+        'RightShoulder': (-0.096, 0.619, 0.082),
+        'LeftElbow': (-0.529, 0.407, 0.312),
+        'RightElbow': (0.018, 0.446, 0.287),
+        'LeftWrist': (-0.341, 0.554, 0.410),
+        'RightWrist': (-0.203, 0.555, 0.399),
+        'LeftHand': (-0.274, 0.594, 0.384),
+        'RightHand': (-0.272, 0.557, 0.435),
+        'LeftFingers': (-0.218, 0.622, 0.434),
+        'RightFingers': (-0.325, 0.615, 0.441),
+        'Core': (-0.238, 0.277, 0.100),
+        'Neck': (-0.262, 0.669, 0.122),
+        'Head': (-0.184, 0.815, 0.119),
+    },
+}
+
+
+>>> CG-ALT id=71 "bottom defeating\nhip post in\nclosed guard"
+# ===== cg_alt_71 | bottom defeating\nhip post in\nclosed guard =====
+POSE = {
+    'p0': {
+        'LeftToe': (-0.398, -0.485, 0.025),
+        'RightToe': (-0.606, -0.109, 0.025),
+        'LeftHeel': (-0.244, -0.366, 0.151),
+        'RightHeel': (-0.444, 0.024, 0.113),
+        'LeftAnkle': (-0.241, -0.421, 0.079),
+        'RightAnkle': (-0.487, 0.024, 0.031),
+        'LeftKnee': (0.166, -0.293, 0.054),
+        'RightKnee': (-0.207, 0.351, 0.050),
+        'LeftHip': (-0.235, -0.241, 0.203),
+        'RightHip': (-0.340, -0.034, 0.189),
+        'LeftShoulder': (0.131, -0.130, 0.515),
+        'RightShoulder': (0.001, 0.181, 0.531),
+        'LeftElbow': (0.147, -0.173, 0.232),
+        'RightElbow': (-0.095, 0.293, 0.279),
+        'LeftWrist': (0.336, -0.037, 0.353),
+        'RightWrist': (0.151, 0.321, 0.382),
+        'LeftHand': (0.377, -0.009, 0.421),
+        'RightHand': (0.209, 0.303, 0.439),
+        'LeftFingers': (0.414, 0.064, 0.396),
+        'RightFingers': (0.268, 0.255, 0.411),
+        'Core': (-0.225, -0.091, 0.428),
+        'Neck': (0.094, 0.036, 0.569),
+        'Head': (0.219, 0.097, 0.661),
+    },
+    'p1': {
+        'LeftToe': (-0.584, -0.435, 0.417),
+        'RightToe': (-0.710, -0.310, 0.547),
+        'LeftHeel': (-0.418, -0.325, 0.301),
+        'RightHeel': (-0.585, -0.211, 0.382),
+        'LeftAnkle': (-0.464, -0.307, 0.379),
+        'RightAnkle': (-0.563, -0.257, 0.457),
+        'LeftKnee': (-0.374, 0.109, 0.417),
+        'RightKnee': (-0.140, -0.314, 0.409),
+        'LeftHip': (-0.019, 0.133, 0.175),
+        'RightHip': (0.086, -0.069, 0.133),
+        'LeftShoulder': (0.438, 0.446, 0.218),
+        'RightShoulder': (0.595, 0.140, 0.225),
+        'LeftElbow': (0.158, 0.381, 0.223),
+        'RightElbow': (0.378, -0.052, 0.186),
+        'LeftWrist': (0.200, 0.180, 0.386),
+        'RightWrist': (0.238, 0.079, 0.379),
+        'LeftHand': (0.149, 0.191, 0.446),
+        'RightHand': (0.205, 0.031, 0.435),
+        'LeftFingers': (0.148, 0.133, 0.505),
+        'RightFingers': (0.158, 0.067, 0.491),
+        'Core': (0.243, 0.150, 0.103),
+        'Neck': (0.549, 0.310, 0.235),
+        'Head': (0.656, 0.360, 0.352),
+    },
+}
+
+
+>>> CG-ALT id=540 "closed guard\nw/ overhook\n+ collar tie"
+# ===== cg_alt_540 | closed guard\nw/ overhook\n+ collar tie =====
+POSE = {
+    'p0': {
+        'LeftToe': (0.446, 0.949, 0.025),
+        'RightToe': (0.890, 0.822, 0.025),
+        'LeftHeel': (0.471, 0.735, 0.097),
+        'RightHeel': (0.813, 0.615, 0.077),
+        'LeftAnkle': (0.406, 0.771, 0.044),
+        'RightAnkle': (0.883, 0.640, 0.030),
+        'LeftKnee': (0.180, 0.406, 0.057),
+        'RightKnee': (0.891, 0.208, 0.055),
+        'LeftHip': (0.493, 0.658, 0.211),
+        'RightHip': (0.707, 0.567, 0.209),
+        'LeftShoulder': (0.305, 0.153, 0.255),
+        'RightShoulder': (0.600, 0.073, 0.283),
+        'LeftElbow': (0.146, 0.033, 0.045),
+        'RightElbow': (0.739, -0.025, 0.045),
+        'LeftWrist': (0.398, -0.039, 0.020),
+        'RightWrist': (0.539, 0.001, 0.219),
+        'LeftHand': (0.417, -0.117, 0.034),
+        'RightHand': (0.476, -0.027, 0.265),
+        'LeftFingers': (0.478, -0.131, 0.085),
+        'RightFingers': (0.435, -0.088, 0.230),
+        'Core': (0.528, 0.429, 0.354),
+        'Neck': (0.430, 0.058, 0.331),
+        'Head': (0.380, -0.095, 0.290),
+    },
+    'p1': {
+        'LeftToe': (0.526, 0.567, 0.655),
+        'RightToe': (0.535, 0.397, 0.640),
+        'LeftHeel': (0.513, 0.521, 0.428),
+        'RightHeel': (0.612, 0.330, 0.437),
+        'LeftAnkle': (0.567, 0.496, 0.498),
+        'RightAnkle': (0.527, 0.345, 0.471),
+        'LeftKnee': (0.808, 0.141, 0.483),
+        'RightKnee': (0.112, 0.300, 0.365),
+        'LeftHip': (0.653, 0.245, 0.094),
+        'RightHip': (0.439, 0.325, 0.090),
+        'LeftShoulder': (0.418, -0.308, 0.088),
+        'RightShoulder': (0.143, -0.128, 0.093),
+        'LeftElbow': (0.632, -0.110, 0.095),
+        'RightElbow': (0.084, 0.157, 0.097),
+        'LeftWrist': (0.502, -0.018, 0.299),
+        'RightWrist': (0.346, 0.203, 0.134),
+        'LeftHand': (0.473, -0.018, 0.376),
+        'RightHand': (0.392, 0.201, 0.197),
+        'LeftFingers': (0.395, 0.009, 0.382),
+        'RightFingers': (0.382, 0.251, 0.259),
+        'Core': (0.460, 0.056, 0.115),
+        'Neck': (0.246, -0.273, 0.109),
+        'Head': (0.180, -0.378, 0.218),
+    },
+}
+
+
+### exact 'mount' name:

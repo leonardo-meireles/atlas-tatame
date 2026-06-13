@@ -1,0 +1,41 @@
+# positions=601 transitions=1485
+
+# ===== cem-quilos (dir=conceitos) =====
+# matched re=/\bside control\b/  candidates=12 (considered=8)
+#   top: [p446]side control w/ far underhook=0.54 | [p99]side control elbow level=0.49 | [p225]side control w/ head&arm=0.48 | [p133]side control w/ bottom body lock=0.43 | [p159]side control w/ seatbelt and first hook=0.39 | [p53]side control w/ bottom underhook=0.35
+# CHOSEN position id=446 "side control w/ far underhook" score=0.544
+
+# ===== norte-sul (dir=conceitos) =====
+# matched re=/^north ?\/?south$/  candidates=1 (considered=1)
+#   top: [p2]north south=0.55
+# CHOSEN position id=2 "north south" score=0.553
+
+# ===== tartaruga (dir=conceitos) =====
+# matched re=/^parallel\s*turtle$/  candidates=1 (considered=1)
+#   top: [p237]parallel turtle=0.42
+# CHOSEN position id=237 "parallel turtle" score=0.419
+
+# ===== raspagem-de-tesoura (dir=tecnicas) =====
+# SUBSTITUTION: scissor sweep absent in GrappleMap (only Reilly Bodycomb leglock 'scissor'/'flying scissor'). Closest closed/full-guard sweep used.
+# matched re=/hip ?bump sweep w\/? ?elbow post/  candidates=1 (considered=1)
+#   top: [p233]hip bump sweep w/ elbow post=0.30
+# CHOSEN position id=233 "hip bump sweep w/ elbow post" score=0.296
+
+# wrote .scratch/figuras-grapplemap-pipeline/conceitos_data.py
+# rendered slugs: cem-quilos, norte-sul, tartaruga, raspagem-de-tesoura
+# NOT FOUND: (none)
+# CONCEITOS INDEX JSON:
+[
+  {
+    "slug": "cem-quilos",
+    "file": "cem-quilos.png"
+  },
+  {
+    "slug": "norte-sul",
+    "file": "norte-sul.png"
+  },
+  {
+    "slug": "tartaruga",
+    "file": "tartaruga.png"
+  }
+]

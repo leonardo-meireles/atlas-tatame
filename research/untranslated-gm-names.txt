@@ -1,0 +1,9 @@
+# Untranslated GM names (gmKey not in PT_BR_NAMES)
+# positions: 0 untranslated / 600 distinct
+# transitions: 0 untranslated / 812 distinct
+
+## POSITIONS (0)
+
+
+## TRANSITIONS (0)
+

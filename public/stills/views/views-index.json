@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "closed-guard-w-100",
+    "nome": "Guarda fechada",
+    "angles": [
+      { "angulo": "3/4", "file": "closed-guard-w-100/0.png" },
+      { "angulo": "Lado", "file": "closed-guard-w-100/1.png" },
+      { "angulo": "Costas", "file": "closed-guard-w-100/2.png" },
+      { "angulo": "Cima", "file": "closed-guard-w-100/3.png" }
+    ]
+  },
+  {
+    "slug": "mounted-triangle",
+    "nome": "Montada",
+    "angles": [
+      { "angulo": "3/4", "file": "mounted-triangle/0.png" },
+      { "angulo": "Lado", "file": "mounted-triangle/1.png" },
+      { "angulo": "Costas", "file": "mounted-triangle/2.png" },
+      { "angulo": "Cima", "file": "mounted-triangle/3.png" }
+    ]
+  },
+  {
+    "slug": "knee-on-belly-drape",
+    "nome": "Joelho na barriga",
+    "angles": [
+      { "angulo": "3/4", "file": "knee-on-belly-drape/0.png" },
+      { "angulo": "Lado", "file": "knee-on-belly-drape/1.png" },
+      { "angulo": "Costas", "file": "knee-on-belly-drape/2.png" },
+      { "angulo": "Cima", "file": "knee-on-belly-drape/3.png" }
+    ]
+  },
+  {
+    "slug": "north-south-choke",
+    "nome": "Norte-sul",
+    "angles": [
+      { "angulo": "3/4", "file": "north-south-choke/0.png" },
+      { "angulo": "Lado", "file": "north-south-choke/1.png" },
+      { "angulo": "Costas", "file": "north-south-choke/2.png" },
+      { "angulo": "Cima", "file": "north-south-choke/3.png" }
+    ]
+  },
+  {
+    "slug": "threatened-triangle-w-hands-clasped",
+    "nome": "Triângulo",
+    "angles": [
+      { "angulo": "3/4", "file": "threatened-triangle-w-hands-clasped/0.png" },
+      { "angulo": "Lado", "file": "threatened-triangle-w-hands-clasped/1.png" },
+      { "angulo": "Costas", "file": "threatened-triangle-w-hands-clasped/2.png" },
+      { "angulo": "Cima", "file": "threatened-triangle-w-hands-clasped/3.png" }
+    ]
+  },
+  {
+    "slug": "rear-naked-choke-w-arm-trapped",
+    "nome": "Pelas costas",
+    "angles": [
+      { "angulo": "3/4", "file": "rear-naked-choke-w-arm-trapped/0.png" },
+      { "angulo": "Lado", "file": "rear-naked-choke-w-arm-trapped/1.png" },
+      { "angulo": "Costas", "file": "rear-naked-choke-w-arm-trapped/2.png" },
+      { "angulo": "Cima", "file": "rear-naked-choke-w-arm-trapped/3.png" }
+    ]
+  }
+]

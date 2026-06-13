@@ -1,0 +1,88 @@
+flagged: 87
+P ...a -> ...a
+P ...b -> ...b
+P ...c -> ...c
+P 50/50 heel hook -> 50/50 Heel Hook
+P angled monoplata -> Angled Monoplata
+P cop landing -> Cop Landing
+P distant leg drag -> Distant Leg Drag
+P double ankle pick -> Double Ankle Pick
+P electric chair -> Electric Chair
+P electric cradle -> Electric Cradle
+P grounded single leg vs arm drag -> Grounded Single Leg vs Arm Drag
+P hippoplatamus -> Hippoplatamus
+P homer -> Homer
+P honey hole heel hook -> Honey Hole Heel Hook
+P honey hole -> Honey Hole
+P japanese necktie -> Japanese Necktie
+P leg ride -> Leg Ride
+P new jersey -> New Jersey
+P old school -> Old School
+P pablo lockdown -> Pablo Lockdown
+P perfect kimura -> Perfect Kimura
+P pre-web -> Pre-web
+P safe haven -> Safe Haven
+P single leg arm drag 2 -> Single Leg Arm Drag 2
+P single leg vs kimura -> Single Leg vs Kimura
+P single leg vs leg ride -> Single Leg vs Leg Ride
+P single leg vs spladle -> Single Leg vs Spladle
+P stoner control -> Stoner Control
+P toe hold -> Toe Hold
+P truck -> Truck
+P ¼ clinch -> ¼ Clinch
+T (un)kneel -> (un)kneel
+T air 300 -> Air 300
+T alcatraz -> Alcatraz
+T anaconda -> Anaconda
+T arm drag -> Arm Drag
+T back step -> Back Step
+T backdoor -> Backdoor
+T barzegar -> Barzegar
+T berimbolo -> Berimbolo
+T body lock -> Body Lock
+T broomstick -> Broomstick
+T cement job -> Cement Job
+T clinch -> Clinch
+T cradle -> Cradle
+T crossface -> Crossface
+T crotch rocket -> Crotch Rocket
+T double leg -> Double Leg
+T duck under -> Duck Under
+T establish leg drag -> Establish Leg Drag
+T fireman's carry -> Fireman's Carry
+T fireman -> Fireman
+T fishnet -> Fishnet
+T frame -> Frame
+T funk -> Funk
+T gangsta lean -> Gangsta Lean
+T gator roll -> Gator Roll
+T half and half -> Half and Half
+T jailbreak -> Jailbreak
+T jaws of life -> Jaws of Life
+T jedi mind trick -> Jedi Mind Trick
+T kick-up -> Kick-up
+T kick-up2 -> Kick-up2
+T lockdown -> Lockdown
+T meat hook -> Meat Hook
+T millenium falcon -> Millenium Falcon
+T monoplata -> Monoplata
+T o-soto-gari -> O-soto-gari
+T pummel -> Pummel
+T rubber -> Rubber
+T seatbelt -> Seatbelt
+T shovel -> Shovel
+T sit in -> Sit in
+T sit out -> Sit Out
+T snapdown2 -> Snapdown2
+T sorcerer -> Sorcerer
+T spladle -> Spladle
+T sprawl -> Sprawl
+T stagger -> Stagger
+T stub -> Stub
+T the homer -> The Homer
+T tony montana -> Tony Montana
+T twister -> Twister
+T uchi-mata -> Uchi-mata
+T underhook -> Underhook
+T whizzer -> Whizzer
+T wip -> Wip

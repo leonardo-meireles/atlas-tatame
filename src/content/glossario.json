@@ -1,0 +1,1055 @@
+[
+ {
+  "slug": "americana",
+  "nomePt": "Americana",
+  "nomeEn": "Americana (figure-four armlock / ude-garami)",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave de ombro com o braço dobrado em 90 graus: você gira o antebraço do oponente pra baixo, como uma alavanca, travando o ombro até ele bater.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "anaconda",
+  "nomePt": "Anaconda",
+  "nomeEn": "Anaconda choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento de frente que prende cabeça e um braço do oponente, fechando o triângulo de braço por baixo a partir do front headlock.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "chave-de-tornozelo",
+  "nomePt": "Chave de tornozelo",
+  "nomeEn": "Ankle lock (straight ankle lock)",
+  "tipo": "finalizacao",
+  "definicaoPt": "Você prende o pé do oponente e estende o tornozelo apoiando o calcanhar no antebraço, comprimindo a articulação até o tap.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "armlock",
+  "nomePt": "Armlock",
+  "nomeEn": "Armbar (juji-gatame)",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave que hiperestende o cotovelo: você isola o braço, prende com as pernas e empurra o quadril pra cima até esticar a articulação.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "arm-drag",
+  "nomePt": "Arm drag",
+  "nomeEn": "Arm drag",
+  "tipo": "transicao",
+  "definicaoPt": "Você puxa o braço do oponente atravessado pelo corpo dele, tirando-o da linha pra ganhar ângulo e atacar as costas.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "triangulo-de-braco",
+  "nomePt": "Triângulo de braço",
+  "nomeEn": "Arm-triangle choke (kata-gatame / head and arm)",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento que aperta o pescoço usando o próprio ombro do oponente de um lado e seu antebraço do outro, fechando o espaço até cortar o sangue.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "ashi-garami",
+  "nomePt": "Ashi garami",
+  "nomeEn": "Ashi garami",
+  "tipo": "posicao",
+  "definicaoPt": "Enrosco de pernas que prende a perna do oponente pra controlar e montar ataques de chave de pé. (Ashi = perna/pé em japonês.)",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "pegada-nas-costas",
+  "nomePt": "Pegada nas costas",
+  "nomeEn": "Back control / back mount / rear mount",
+  "tipo": "posicao",
+  "definicaoPt": "Você controla o oponente por trás, com o peito grudado nas costas dele e os ganchos presos, posição mais dominante do jogo.",
+  "fonte": "global-glossary",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "backstep",
+  "nomePt": "Backstep",
+  "nomeEn": "Backstep",
+  "tipo": "transicao",
+  "definicaoPt": "Passo pra trás com a perna pra reposicionar o quadril, muito usado pra completar passagens e trocar de lado.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "base",
+  "nomePt": "Base",
+  "nomeEn": "Base",
+  "tipo": "conceito",
+  "definicaoPt": "Estabilidade no chão ou em pé: centro de gravidade baixo e pernas abertas pra não ser desequilibrado nem raspado.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "abraco-de-urso",
+  "nomePt": "Abraço de urso",
+  "nomeEn": "Bear hug",
+  "tipo": "transicao",
+  "definicaoPt": "Agarre em pé envolvendo o tronco do oponente por baixo dos braços, usado pra controlar e levar pra queda.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "faixa",
+  "nomePt": "Faixa",
+  "nomeEn": "Belt",
+  "tipo": "conceito",
+  "definicaoPt": "Graduação que marca o nível do praticante, da branca à preta. Os graus (listras) marcam o progresso dentro de uma mesma faixa.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "berimbolo",
+  "nomePt": "Berimbolo",
+  "nomeEn": "Berimbolo",
+  "tipo": "transicao",
+  "definicaoPt": "Você gira por baixo do oponente, rodando sob as pernas dele a partir da De La Riva, pra emergir nas costas.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "bicep-slicer",
+  "nomePt": "Bicep slicer",
+  "nomeEn": "Bicep slicer",
+  "tipo": "finalizacao",
+  "definicaoPt": "Compressão dolorosa do bíceps prensando a canela contra o músculo enquanto se dobra o braço.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "estrangulamento-arco-e-flecha",
+  "nomePt": "Estrangulamento arco e flecha",
+  "nomeEn": "Bow and arrow choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento de gola das costas: você puxa a gola com uma mão e a perna do oponente com a outra, arqueando o corpo como quem retesa um arco.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "queda-amortecida",
+  "nomePt": "Queda amortecida",
+  "nomeEn": "Breakfall (ukemi)",
+  "tipo": "conceito",
+  "definicaoPt": "Técnica de cair com segurança, distribuindo o impacto pra não se machucar ao ser derrubado ou projetado.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "guarda-de-ganchos",
+  "nomePt": "Guarda de ganchos",
+  "nomeEn": "Butterfly guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda sentada com os pés em gancho por dentro das coxas do oponente, usada pra desequilibrar e raspar com elevação.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "calf-slicer",
+  "nomePt": "Calf slicer",
+  "nomeEn": "Calf slicer",
+  "tipo": "finalizacao",
+  "definicaoPt": "Compressão da panturrilha prensando a canela contra ela enquanto se dobra o joelho do oponente.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "orelha-de-couve-flor",
+  "nomePt": "Orelha de couve-flor",
+  "nomeEn": "Cauliflower ear",
+  "tipo": "conceito",
+  "definicaoPt": "Deformação da orelha causada por atrito e pancadas repetidas no treino, que separa o tecido da cartilagem.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "estrangulamento",
+  "nomePt": "Estrangulamento",
+  "nomeEn": "Choke / strangle",
+  "tipo": "finalizacao",
+  "definicaoPt": "Finalização no pescoço: pode cortar o ar (traqueia) ou o sangue pro cérebro (carótidas). O de sangue é o que finaliza de verdade.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "clinch",
+  "nomePt": "Clinch",
+  "nomeEn": "Clinch",
+  "tipo": "posicao",
+  "definicaoPt": "Pegada em pé, agarrado ao oponente, onde se briga pelo controle pra armar a queda.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "guarda-fechada",
+  "nomePt": "Guarda fechada",
+  "nomeEn": "Closed guard",
+  "tipo": "posicao",
+  "definicaoPt": "De baixo, você envolve o tronco do oponente com as pernas e cruza os tornozelos atrás das costas dele pra prender e controlar.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "estrangulamento-de-gola",
+  "nomePt": "Estrangulamento de gola",
+  "nomeEn": "Collar choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento que usa a gola do quimono como alavanca pra apertar o pescoço do oponente.",
+  "fonte": "global-glossary, bjjdata",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "crucifixo",
+  "nomePt": "Crucifixo",
+  "nomeEn": "Crucifix position",
+  "tipo": "posicao",
+  "definicaoPt": "Controle perpendicular que prende os dois braços do oponente abertos, deixando o pescoço dele exposto pra ataques.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "darce",
+  "nomePt": "D'Arce",
+  "nomeEn": "D'Arce choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Triângulo de braço de frente parecido com o anaconda, mas com o braço entrando pelo lado oposto, por baixo do pescoço e da axila.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "meia-guarda-profunda",
+  "nomePt": "Meia-guarda profunda",
+  "nomeEn": "Deep half guard",
+  "tipo": "posicao",
+  "definicaoPt": "Variação avançada da meia-guarda em que você se enfia bem por baixo do oponente, abaixo do quadril dele, pra raspar.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "de-la-riva",
+  "nomePt": "De La Riva",
+  "nomeEn": "De La Riva guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda aberta em que você enrola uma perna por fora da perna do oponente, com o pé enganchado, pra controlar a distância e desequilibrar.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "baiana",
+  "nomePt": "Baiana",
+  "nomeEn": "Double leg takedown",
+  "tipo": "transicao",
+  "definicaoPt": "Queda agarrando as duas pernas do oponente e empurrando pra derrubá-lo no chão.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "duplo-underhook",
+  "nomePt": "Duplo underhook",
+  "nomeEn": "Double underhooks",
+  "tipo": "conceito",
+  "definicaoPt": "Controle dos dois braços do oponente por baixo das axilas, dando vantagem pra elevar, passar ou derrubar.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "fuga",
+  "nomePt": "Fuga",
+  "nomeEn": "Escape",
+  "tipo": "transicao",
+  "definicaoPt": "Técnica pra se libertar de um controle ou de uma finalização e recuperar posição melhor.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "estima-lock",
+  "nomePt": "Estima lock",
+  "nomeEn": "Estima lock",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave de pé criada por Victor Estima (irmãos Estima): prende o pé do oponente e fecha a pegada por cima do próprio punho, comprimindo o tornozelo de forma reta — diferente da toe hold, que torce os dedos.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "ezequiel",
+  "nomePt": "Ezequiel",
+  "nomeEn": "Ezekiel choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento com um braço por trás do pescoço enquanto a outra mão puxa a manga, fechando o aperto. Dá pra aplicar até por baixo da montada.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "lado-de-fora",
+  "nomePt": "Lado de fora",
+  "nomeEn": "Far side",
+  "tipo": "conceito",
+  "definicaoPt": "O lado do oponente oposto ao seu posicionamento — referência usada pra explicar pegadas e ataques.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "queda-de-ombro",
+  "nomePt": "Queda de ombro",
+  "nomeEn": "Fireman's carry",
+  "tipo": "transicao",
+  "definicaoPt": "Queda em que você ergue o oponente sobre os ombros e o rola pro chão.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "flow-roll",
+  "nomePt": "Flow roll",
+  "nomeEn": "Flow roll",
+  "tipo": "conceito",
+  "definicaoPt": "Treino solto e contínuo, fluindo entre as técnicas sem força nem pausa, pra soltar o movimento.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "chave-de-pe",
+  "nomePt": "Chave de pé",
+  "nomeEn": "Foot lock",
+  "tipo": "finalizacao",
+  "definicaoPt": "Termo guarda-chuva pras finalizações que atacam o pé e o tornozelo por torção ou extensão.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "botinha",
+  "nomePt": "Botinha",
+  "nomeEn": "Straight footlock",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave de pé reta: você abraça o pé do oponente e comprime o tornozelo com o antebraço apoiado no calcanhar.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "gable-grip",
+  "nomePt": "Pegada Gable",
+  "nomeEn": "Gable grip",
+  "tipo": "conceito",
+  "definicaoPt": "Pegada palma com palma, sem entrelaçar os dedos, usada em clinches e quedas pra fechar abraços com força.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "quimono",
+  "nomePt": "Quimono",
+  "nomeEn": "Gi / kimono",
+  "tipo": "conceito",
+  "definicaoPt": "Uniforme de treino composto de casaco, calça e faixa. No Brasil se chama quimono ou kimono.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "guarda",
+  "nomePt": "Guarda",
+  "nomeEn": "Guard",
+  "tipo": "posicao",
+  "definicaoPt": "Posição em que quem está por baixo usa as pernas pra controlar o oponente e impedir que ele avance.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "passagem-de-guarda",
+  "nomePt": "Passagem de guarda",
+  "nomeEn": "Guard pass",
+  "tipo": "passagem",
+  "definicaoPt": "Ação de ultrapassar as pernas do oponente pra chegar numa posição dominante por cima.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "recuperacao-de-guarda",
+  "nomePt": "Recuperação de guarda",
+  "nomeEn": "Guard retention",
+  "tipo": "conceito",
+  "definicaoPt": "Conjunto de movimentos pra manter a guarda e impedir que o oponente passe.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "guilhotina",
+  "nomePt": "Guilhotina",
+  "nomeEn": "Guillotine choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento de frente: você envolve o pescoço do oponente com o antebraço por baixo do queixo e puxa pra cima.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "meia-guarda",
+  "nomePt": "Meia-guarda",
+  "nomeEn": "Half guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda em que suas pernas prendem apenas uma das pernas do oponente, segurando o avanço dele.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "gravata-de-cabeca",
+  "nomePt": "Gravata de cabeça",
+  "nomeEn": "Headlock",
+  "tipo": "posicao",
+  "definicaoPt": "Controle em que o braço envolve a cabeça e o pescoço do oponente. Pouco técnico isolado, mas comum em transições.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "heel-hook",
+  "nomePt": "Heel hook",
+  "nomeEn": "Heel hook",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave de perna perigosa: você prende o calcanhar e torce o pé, transferindo a torção pro joelho. Exige muito cuidado.",
+  "fonte": "global-glossary",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "hip-bump",
+  "nomePt": "Raspagem de quadril",
+  "nomeEn": "Hip bump sweep",
+  "tipo": "raspagem",
+  "definicaoPt": "Da guarda fechada, você senta, joga o quadril contra o oponente pra desequilibrá-lo e cair por cima.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "fuga-de-quadril",
+  "nomePt": "Fuga de quadril",
+  "nomeEn": "Hip escape (shrimp)",
+  "tipo": "transicao",
+  "definicaoPt": "Movimento de empurrar o quadril pro lado, como um camarão, pra criar espaço e escapar de controles.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "gancho",
+  "nomePt": "Gancho",
+  "nomeEn": "Hook",
+  "tipo": "conceito",
+  "definicaoPt": "Uso do pé ou da perna enganchado por dentro do oponente pra controlar, desequilibrar ou prender.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "honey-hole",
+  "nomePt": "Honey hole",
+  "nomeEn": "Honey hole (inside sankaku / 4-11)",
+  "tipo": "posicao",
+  "definicaoPt": "Enrosco de pernas avançado que abre os melhores ataques de heel hook interno, prendendo a perna do oponente entre as suas.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "imanari-roll",
+  "nomePt": "Imanari roll",
+  "nomeEn": "Imanari roll",
+  "tipo": "transicao",
+  "definicaoPt": "Entrada rolada, em pé, que mergulha direto num enrosco de perna pra atacar chave de pé.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "guarda-invertida",
+  "nomePt": "Guarda invertida",
+  "nomeEn": "Inverted guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda aberta de cabeça pra baixo, usada pra recuperar guarda ou entrar em ataques de perna.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "gravata-japonesa",
+  "nomePt": "Gravata japonesa",
+  "nomeEn": "Japanese necktie",
+  "tipo": "finalizacao",
+  "definicaoPt": "Variação do triângulo de braço aplicada contra o oponente de quatro (tartaruga), com o atacante do lado oposto.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "kesa-gatame",
+  "nomePt": "Kesa gatame",
+  "nomeEn": "Kesa gatame",
+  "tipo": "posicao",
+  "definicaoPt": "Imobilização lateral do judô com o quadril virado em direção à cabeça do oponente, prendendo cabeça e braço.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "kimura",
+  "nomePt": "Kimura",
+  "nomeEn": "Kimura",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave de ombro com pegada dupla (figura-quatro) que gira o braço do oponente pra trás, travando ombro e cotovelo.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "chave-de-policia",
+  "nomePt": "Chave de polícia",
+  "nomeEn": "Single-arm kimura",
+  "tipo": "finalizacao",
+  "definicaoPt": "Variação da kimura aplicada com controle de só um braço, comum em situações de pé ou na defesa.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "chave-de-joelho",
+  "nomePt": "Chave de joelho",
+  "nomeEn": "Kneebar",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave que hiperestende o joelho, mecânica igual à do armlock, só que esticando a perna do oponente.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "joelho-na-barriga",
+  "nomePt": "Joelho na barriga",
+  "nomeEn": "Knee on belly",
+  "tipo": "posicao",
+  "definicaoPt": "Posição dominante por cima com o joelho cravado na barriga do oponente, ágil pra pressionar e atacar.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "knee-shield",
+  "nomePt": "Knee shield",
+  "nomeEn": "Knee shield",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda em que você cruza a canela na frente do peito do oponente pra controlar a distância e a postura dele.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "lapela",
+  "nomePt": "Lapela",
+  "nomeEn": "Lapel",
+  "tipo": "conceito",
+  "definicaoPt": "O tecido da gola/aba do quimono, usado pra pegadas, controles e até pra prender membros do oponente.",
+  "fonte": "global-glossary",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "guarda-lasso",
+  "nomePt": "Guarda lasso",
+  "nomeEn": "Lasso guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda aberta em que você enrola uma perna por dentro e por cima do braço do oponente, segurando a manga, pra travá-lo.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "leg-drag",
+  "nomePt": "Leg drag",
+  "nomeEn": "Leg drag",
+  "tipo": "passagem",
+  "definicaoPt": "Passagem em que você arrasta a perna do oponente atravessada pro lado, neutralizando o quadril dele pra passar.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "lockdown",
+  "nomePt": "Lockdown",
+  "nomeEn": "Lockdown",
+  "tipo": "posicao",
+  "definicaoPt": "Variação da meia-guarda em que você entrelaça e estica a perna do oponente, prendendo e imobilizando pra montar ataques.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "passagem-long-step",
+  "nomePt": "Passagem long step",
+  "nomeEn": "Long step pass",
+  "tipo": "passagem",
+  "definicaoPt": "Passagem em que você dá um passo longo pra trás pra tirar a perna do contato e contornar a guarda.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "estrangulamento-rodado",
+  "nomePt": "Estrangulamento rodado",
+  "nomeEn": "Loop choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento de frente em que você enrola a gola em volta do pescoço do oponente e roda a mão pra apertar.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "mata-leao",
+  "nomePt": "Mata-leão",
+  "nomeEn": "Rear naked choke (RNC / lion killer)",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento pelas costas: você envolve o pescoço com o braço, encaixa no bíceps oposto e fecha cortando o sangue.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "montada",
+  "nomePt": "Montada",
+  "nomeEn": "Mount",
+  "tipo": "posicao",
+  "definicaoPt": "Posição dominante por cima, sentado sobre o tronco do oponente de frente, com pressão e ataques fáceis disponíveis.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "neck-crank",
+  "nomePt": "Neck crank",
+  "nomeEn": "Neck crank",
+  "tipo": "finalizacao",
+  "definicaoPt": "Pressão forçada na coluna cervical, torcendo ou dobrando o pescoço. Proibida em muitas regras.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "no-gi",
+  "nomePt": "No-gi",
+  "nomeEn": "No-gi",
+  "tipo": "conceito",
+  "definicaoPt": "Jiu-jitsu treinado sem o quimono, de rashguard e shorts, com pegadas no corpo em vez de na roupa.",
+  "fonte": "global-glossary",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "norte-sul",
+  "nomePt": "Norte-sul",
+  "nomeEn": "North-south position",
+  "tipo": "posicao",
+  "definicaoPt": "Variação do controle lateral em que você fica por cima alinhado cabeça-com-pés, em sentido oposto ao oponente.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "omoplata",
+  "nomePt": "Omoplata",
+  "nomeEn": "Omoplata",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave de ombro feita com as pernas: você enrola a perna sobre o braço do oponente e gira o quadril pra travar o ombro.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "guarda-aberta",
+  "nomePt": "Guarda aberta",
+  "nomeEn": "Open guard",
+  "tipo": "posicao",
+  "definicaoPt": "Qualquer guarda em que as pernas ficam entre você e o oponente sem cruzar os tornozelos, jogando à distância.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "overhook",
+  "nomePt": "Overhook",
+  "nomeEn": "Overhook",
+  "tipo": "conceito",
+  "definicaoPt": "Pegada por cima do braço do oponente, enganchando-o pra controlar e armar ataques como o triângulo e a omoplata.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "passagem-over-under",
+  "nomePt": "Passagem over-under",
+  "nomeEn": "Over-under pass",
+  "tipo": "passagem",
+  "definicaoPt": "Passagem em que você passa um braço por cima de uma perna do oponente e o outro por baixo da outra, e pressiona pra atravessar.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "gravata-peruana",
+  "nomePt": "Gravata peruana",
+  "nomeEn": "Peruvian necktie",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento de front headlock com o corpo enrolado por cima do pescoço e do braço, somando aperto e pressão na coluna.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "puxar-pra-guarda",
+  "nomePt": "Puxar pra guarda",
+  "nomeEn": "Pull guard",
+  "tipo": "transicao",
+  "definicaoPt": "De pé, você se senta puxando o oponente pra dentro da sua guarda em vez de tentar derrubá-lo.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "esgrima",
+  "nomePt": "Esgrima",
+  "nomeEn": "Pummelling",
+  "tipo": "conceito",
+  "definicaoPt": "Troca contínua de underhooks no corpo a corpo, brigando por dentro pra conquistar o controle interno.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "quarter-guard",
+  "nomePt": "Quarter guard",
+  "nomeEn": "Quarter guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda defensiva entre a meia-guarda e a montada, em que você ainda segura o tornozelo do oponente pra atrasar a passagem.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "reversao",
+  "nomePt": "Reversão",
+  "nomeEn": "Reversal",
+  "tipo": "transicao",
+  "definicaoPt": "Inverter de baixo pra cima a partir de uma posição que não é guarda, retomando o controle.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "rolamento",
+  "nomePt": "Rolamento",
+  "nomeEn": "Forward roll / rolling",
+  "tipo": "conceito",
+  "definicaoPt": "Cambalhota controlada pra frente, usada em deslocamento e em algumas raspagens e entradas. Tambem é o nome do treino solto (rolar).",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "rubber-guard",
+  "nomePt": "Rubber guard",
+  "nomeEn": "Rubber guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda que prende a postura do oponente puxando a própria perna por cima do ombro dele com a mão.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "cem-quilos",
+  "nomePt": "Cem quilos",
+  "nomeEn": "Side control",
+  "tipo": "posicao",
+  "definicaoPt": "Controle dominante por cima, atravessado sobre o tronco do oponente, com peito e quadril pressionando.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "single-leg",
+  "nomePt": "Single leg",
+  "nomeEn": "Single leg takedown",
+  "tipo": "transicao",
+  "definicaoPt": "Queda agarrando e puxando uma das pernas do oponente pra desequilibrá-lo e levá-lo ao chão.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "finalizacao",
+  "nomePt": "Finalização",
+  "nomeEn": "Submission",
+  "tipo": "conceito",
+  "definicaoPt": "Técnica que força o tap, por dor (chave articular) ou risco de apagar (estrangulamento).",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "raspagem",
+  "nomePt": "Raspagem",
+  "nomeEn": "Sweep",
+  "tipo": "raspagem",
+  "definicaoPt": "Inversão a partir da guarda que leva quem estava por baixo pra cima, derrubando o oponente e pontuando.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "queda",
+  "nomePt": "Queda",
+  "nomeEn": "Takedown",
+  "tipo": "transicao",
+  "definicaoPt": "Levar o oponente ao chão por projeção, rasteira ou luta agarrada.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "defesa-de-queda",
+  "nomePt": "Defesa de queda",
+  "nomeEn": "Takedown defence",
+  "tipo": "conceito",
+  "definicaoPt": "Conjunto de técnicas pra impedir que o oponente te derrube.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "bater",
+  "nomePt": "Bater",
+  "nomeEn": "Tapping out",
+  "tipo": "conceito",
+  "definicaoPt": "Sinalizar a desistência, geralmente batendo a mão no oponente ou na lona, pra encerrar a finalização com segurança.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "levantada-tecnica",
+  "nomePt": "Levantada técnica",
+  "nomeEn": "Technical stand-up",
+  "tipo": "transicao",
+  "definicaoPt": "Forma segura de voltar a ficar em pé, mantendo a guarda de braço e perna pra não ser atacado na subida.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "toe-hold",
+  "nomePt": "Toe hold",
+  "nomeEn": "Toe hold",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave de pé que segura os dedos e o pé do oponente e os gira, torcendo o tornozelo até o tap.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "toreando",
+  "nomePt": "Toreando",
+  "nomeEn": "Toreando pass (bullfighter pass)",
+  "tipo": "passagem",
+  "definicaoPt": "Passagem rápida de guarda aberta: você segura as pernas do oponente e contorna pelo lado, como um toureiro.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "triangulo",
+  "nomePt": "Triângulo",
+  "nomeEn": "Triangle choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento feito com as pernas em forma de triângulo, prendendo o pescoço e um braço do oponente pra cortar o sangue.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "tartaruga",
+  "nomePt": "Tartaruga",
+  "nomeEn": "Turtle position",
+  "tipo": "posicao",
+  "definicaoPt": "Posição defensiva de quatro apoios, com as costas arredondadas e a cabeça recolhida, pra se proteger e tentar recompor.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "twister",
+  "nomePt": "Twister",
+  "nomeEn": "Twister",
+  "tipo": "finalizacao",
+  "definicaoPt": "Torção da coluna que gira a cabeça do oponente em direção ao ombro, vinda da luta-livre. Proibida em muitas regras.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "uchi-mata",
+  "nomePt": "Uchi mata",
+  "nomeEn": "Uchi mata",
+  "tipo": "transicao",
+  "definicaoPt": "Projeção clássica do judô em que você joga o oponente por cima da coxa.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "uke",
+  "nomePt": "Uke",
+  "nomeEn": "Uke",
+  "tipo": "conceito",
+  "definicaoPt": "Termo japonês pra quem recebe a técnica, ou seja, o parceiro que serve de treino.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "underhook",
+  "nomePt": "Underhook",
+  "nomeEn": "Underhook",
+  "tipo": "conceito",
+  "definicaoPt": "Pegada por baixo da axila do oponente, enganchando o braço dele pra controlar o tronco e abrir passagens e quedas.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "upa",
+  "nomePt": "Upa",
+  "nomeEn": "Upa (bridge and roll)",
+  "tipo": "transicao",
+  "definicaoPt": "Fuga fundamental da montada: você faz a ponte e rola o oponente pro lado pra inverter a posição.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "vale-tudo",
+  "nomePt": "Vale Tudo",
+  "nomeEn": "Vale Tudo",
+  "tipo": "conceito",
+  "definicaoPt": "Esporte de combate brasileiro que mistura jiu-jitsu, boxe e luta agarrada, antecessor do MMA.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "von-flue",
+  "nomePt": "Von Flue",
+  "nomeEn": "Von Flue choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Contra-ataque da guilhotina: você crava o ombro no pescoço do oponente ao passar pro controle lateral com underhook.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "worm-guard",
+  "nomePt": "Worm guard",
+  "nomeEn": "Worm guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda de lapela em que você enrola a aba do quimono do oponente em volta da canela dele pra travar o movimento.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "mao-de-vaca",
+  "nomePt": "Mão de vaca",
+  "nomeEn": "Wristlock",
+  "tipo": "finalizacao",
+  "definicaoPt": "Chave que aplica pressão na articulação do punho do oponente, dobrando-o até o tap.",
+  "fonte": "global-glossary, vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "x-guard",
+  "nomePt": "X-guard",
+  "nomeEn": "X guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda jogada por baixo do oponente em pé, com as suas pernas formando um X em torno de uma perna dele pra desequilibrar e raspar.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "z-guard",
+  "nomePt": "Z-guard",
+  "nomeEn": "Z guard",
+  "tipo": "posicao",
+  "definicaoPt": "Variação de meia-guarda com knee shield, em que a perna forma um Z bloqueando o quadril e o peito do oponente.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "estrangulamento-de-relogio",
+  "nomePt": "Estrangulamento de relógio",
+  "nomeEn": "Clock choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento aplicado de cima, contra o oponente na tartaruga: você puxa a gola e gira em volta dele como o ponteiro de um relógio.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "estrangulamento-cruzado",
+  "nomePt": "Estrangulamento cruzado",
+  "nomeEn": "Cross choke / cross-collar choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento de gola com as mãos cruzadas, clássico da montada e da guarda fechada, apertando as carótidas.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "passagem-de-bandeja",
+  "nomePt": "Passagem de bandeja",
+  "nomeEn": "Stack pass",
+  "tipo": "passagem",
+  "definicaoPt": "Passagem que dobra o oponente sobre os próprios ombros (emborcado) pra tirar a pressão das pernas e abrir a guarda.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "guarda-aranha",
+  "nomePt": "Guarda-aranha",
+  "nomeEn": "Spider guard",
+  "tipo": "posicao",
+  "definicaoPt": "Guarda aberta com pegada nas duas mangas e os pés apoiados nos braços do oponente, controlando à distância.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "meia-aranha",
+  "nomePt": "Meia-aranha",
+  "nomeEn": "Half spider guard",
+  "tipo": "posicao",
+  "definicaoPt": "Combinação de meia-guarda com a pegada de aranha na manga, somando o controle de perna com o de braço.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "pegada-mao-com-mao",
+  "nomePt": "Pegada mão com mão",
+  "nomeEn": "Seat belt grip",
+  "tipo": "conceito",
+  "definicaoPt": "Pegada das costas com uma mão por cima do ombro e outra por baixo da axila, unidas, pra travar o controle nas costas.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "tatame",
+  "nomePt": "Tatame",
+  "nomeEn": "Mat",
+  "tipo": "conceito",
+  "definicaoPt": "A superfície acolchoada onde se treina e compete.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "creonte",
+  "nomePt": "Creonte",
+  "nomeEn": "Creonte (team traitor)",
+  "tipo": "conceito",
+  "definicaoPt": "Gíria da cultura do BJJ pro praticante que troca de equipe ou professor de forma vista como desleal.",
+  "fonte": "vocab-ptbr",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "estrangulamento-de-gola-deslizante",
+  "nomePt": "Estrangulamento de gola deslizante",
+  "nomeEn": "Sliding collar choke",
+  "tipo": "finalizacao",
+  "definicaoPt": "Estrangulamento (em geral pelas costas) em que você desliza a mão fundo pela gola do oponente e aperta, puxando o tecido contra o pescoço pra cortar a circulação.",
+  "fonte": "bjjdata",
+  "sourceUrl": "https://github.com/ubershmekel/bjjdata"
+ },
+ {
+  "slug": "ibjjf",
+  "nomePt": "IBJJF",
+  "nomeEn": "IBJJF",
+  "tipo": "conceito",
+  "definicaoPt": "Federação Internacional de Jiu-Jitsu Brasileiro, principal entidade que organiza regras e campeonatos do esporte.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "judo",
+  "nomePt": "Judô",
+  "nomeEn": "Judo",
+  "tipo": "conceito",
+  "definicaoPt": "Arte marcial japonesa focada em projeções e controle no chão, uma das raízes do jiu-jitsu.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "mma",
+  "nomePt": "MMA",
+  "nomeEn": "MMA",
+  "tipo": "conceito",
+  "definicaoPt": "Artes marciais mistas, esporte que combina várias modalidades de combate em pé e no chão.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ },
+ {
+  "slug": "yudansha",
+  "nomePt": "Yudansha",
+  "nomeEn": "Yudansha",
+  "tipo": "conceito",
+  "definicaoPt": "Termo japonês pra quem já chegou à faixa-preta (graduação dan). O oposto é mudansha — quem ainda não tem o dan.",
+  "fonte": "global-glossary",
+  "sourceUrl": ""
+ }
+]

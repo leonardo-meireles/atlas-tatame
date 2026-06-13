@@ -1,0 +1,74 @@
+# positions=601 transitions=1485
+
+# ===== armlock-da-guarda =====
+# matched re=/arm ?bar/  candidates=6 (transitions=4)
+#   top: [t1387]arm bar=0.49 | [t458]arm bar=0.49 | [t891]armbar=0.49 | [t857]arm bar=0.46
+# CHOSEN transition id=1387 "arm bar" score=0.489
+
+# ===== triangulo =====
+# matched re=/^triangle$/  candidates=9 (transitions=9)
+#   top: [t100]triangle=0.59 | [t1296]triangle=0.55 | [t318]triangle=0.43 | [t1085]triangle=0.43 | [t319]triangle=0.43
+# CHOSEN transition id=100 "triangle" score=0.594
+
+# ===== kimura-da-guarda =====
+# matched re=/\bkimura\b/  candidates=27 (transitions=9)
+#   top: [t1294]kimura=0.67 | [t1186]kimura=0.54 | [t813]to/from kimura=0.54 | [t1172]bottom gets and uses two-on-one to get kimura=0.49 | [t432]kimura=0.45
+# CHOSEN transition id=1294 "kimura" score=0.665
+
+# ===== estrangulamento-cruzado =====
+# matched re=/irish collar/  candidates=2 (transitions=1)
+#   top: [t927]irish collar=0.24
+# CHOSEN transition id=927 "irish collar" score=0.237
+
+# ===== raspagem-de-tesoura =====
+# NO candidates for any regex
+
+# ===== raspagem-de-quadril =====
+# matched re=/hip ?bump sweep/  candidates=3 (transitions=1)
+#   top: [t293]hip bump sweep=0.29
+# CHOSEN transition id=293 "hip bump sweep" score=0.292
+
+# ===== raspagem-de-balao =====
+# matched re=/pendulum sweep/  candidates=1 (transitions=1)
+#   top: [t89]pendulum sweep start=0.43
+# CHOSEN transition id=89 "pendulum sweep start" score=0.431
+
+# ===== abertura-e-passagem =====
+# matched re=/break open guard/  candidates=1 (transitions=1)
+#   top: [t794]break open guard=0.21
+# CHOSEN transition id=794 "break open guard" score=0.207
+
+# wrote .scratch/figuras-grapplemap-pipeline/tecnicas_data.py
+# rendered slugs: armlock-da-guarda, triangulo, kimura-da-guarda, estrangulamento-cruzado, raspagem-de-quadril, raspagem-de-balao, abertura-e-passagem
+# NOT FOUND: raspagem-de-tesoura
+# INDEX JSON:
+[
+  {
+    "slug": "armlock-da-guarda",
+    "file": "armlock-da-guarda.png"
+  },
+  {
+    "slug": "triangulo",
+    "file": "triangulo.png"
+  },
+  {
+    "slug": "kimura-da-guarda",
+    "file": "kimura-da-guarda.png"
+  },
+  {
+    "slug": "estrangulamento-cruzado",
+    "file": "estrangulamento-cruzado.png"
+  },
+  {
+    "slug": "raspagem-de-quadril",
+    "file": "raspagem-de-quadril.png"
+  },
+  {
+    "slug": "raspagem-de-balao",
+    "file": "raspagem-de-balao.png"
+  },
+  {
+    "slug": "abertura-e-passagem",
+    "file": "abertura-e-passagem.png"
+  }
+]
