@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 
 // OG image gerada no build/edge — preview no WhatsApp/IG/Twitter. Sem asset externo.
+export const dynamic = "force-static";
 export const alt = "Atlas Jiu-Jitsu — o mapa do jogo, em português";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
